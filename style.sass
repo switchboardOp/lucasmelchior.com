@@ -1,0 +1,85 @@
+$red: rgb(183, 0, 0)
+$white: white
+$black: #333
+
+$mobile-break: 520px
+
+@mixin translate($x, $y)
+    -webkit-transform: translate($x, $y)
+    -ms-transform: translate($x, $y)
+    transform: translate($x, $y)
+
+@mixin flyin($s, $t) 
+    animation: flyin $t ease forwards
+    opacity: 0
+    transform: scale($s)
+    filter: blur(4px)
+  
+@keyframes flyin 
+    to  
+        filter: blur(0)
+        transform: scale(1)
+        opacity: 1
+        
+.absolute-center
+    position: absolute
+    top: 50%
+    left: 50%
+    @include translate(-50%,-50%)
+        
+.container-fluid 
+    padding: 0px
+        
+a
+    color: $black
+    &:hover
+        color: $red
+        text-decoration: none
+
+.red
+    color: $red
+    
+    
+.contact  
+    padding: 0
+    > li
+        list-style: none
+        padding-left: 5px
+        border-left: 2px solid $red
+        @media screen and (min-width: $mobile-break)
+            display: inline-block
+            padding: 0 5px
+#first
+    @media screen and (min-width: $mobile-break)
+        border: 5px
+        
+    
+.feature > div
+    position: relative
+    padding: 0
+    h2
+        @extend .absolute-center
+        color: white
+ 
+#header
+    //position: fixed
+    background: $white
+    > h1 > span
+        display: inline-block
+
+.hero
+    //margin-top: 169px
+    background: url('../img/mode-off.jpg') 50% 50% no-repeat
+    background-size: cover
+    color: white
+    p
+        @include flyin(2, 2s)
+        padding: 10%
+        font-size: 1.3em
+        font-weight: 100
+        text-align: center
+        
+#footer
+    background: $black
+    height: 130px
+    
