@@ -28,7 +28,7 @@ body {
 
 a {
   color: black; }
-  a:hover {
+  a:hover, a:focus, a:active {
     color: #b70000;
     text-decoration: none; }
 
@@ -145,7 +145,7 @@ blockquote::after {
   font-weight: 300; }
   #footer a {
     color: white; }
-    #footer a:hover {
+    #footer a:hover, #footer a:active {
       color: #b70000;
       text-decoration: none; }
   @media screen and (max-width: 715px) {
@@ -186,5 +186,19 @@ blockquote::after {
   -webkit-border-radius: 0 !important;
   -moz-border-radius: 0 !important;
   border-radius: 0 !important; }
+
+.accordion-toggle .panel-heading > h4:after {
+  font-family: "Glyphicons Halflings";
+  content: "";
+  float: right; }
+
+.accordion-toggle.collapsed .panel-heading > h4:after {
+  content: "";
+  float: right; }
+
+.panel-heading, .panel-body {
+  padding: 0 15px 0 15px; }
+  .panel-heading h4, .panel-body h4 {
+    margin: 5px 0; }
 
 /*# sourceMappingURL=style.css.map */

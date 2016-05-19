@@ -46,7 +46,7 @@ body
         
 a
     color: $black
-    &:hover
+    &:hover, &:focus, &:active
         color: $red
         text-decoration: none
 
@@ -164,7 +164,7 @@ blockquote::after
     font-weight: 300
     a 
         color: $white
-        &:hover
+        &:hover, &:active
             color: $red
             text-decoration: none
     .contact > li
@@ -212,3 +212,23 @@ blockquote::after
     -webkit-border-radius: 0 !important
     -moz-border-radius: 0 !important
     border-radius: 0 !important
+
+//.panel-heading
+    background: $grey
+    color: $white
+
+.accordion-toggle .panel-heading>h4:after 
+    // symbol for open panels
+    font-family: 'Glyphicons Halflings' 
+    content: "\e253"   
+    float: right      
+
+.accordion-toggle.collapsed .panel-heading>h4:after 
+    // symbol for collapsed panels
+    content: "\e252"
+    float: right
+
+.panel-heading, .panel-body
+    padding: 0 15px 0 15px
+    h4
+        margin: 5px 0
