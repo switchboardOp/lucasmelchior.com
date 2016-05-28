@@ -1,6 +1,6 @@
 elevator pitch
-social links
-testimonials from linkdin
-skills
-education //morterbord?
+social links fix
+ include github
+education // mortarboard?
 volunteer
+add photo cube / obj
