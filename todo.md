@@ -1,3 +1,0 @@
-- [ ] add LM bust
-- [ ] minimize layout / splash
-- [ ] add color
