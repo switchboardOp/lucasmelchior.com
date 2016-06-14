@@ -1,13 +1,9 @@
 .DS_Store
+.sass-cache/
+*.css.map
+node_modules/*
 
 # Logs
 logs
 *.log
 npm-debug.log*
-
-# Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
-.grunt
-
-.sass-cache/
-*.css.map
-node_modules/*
