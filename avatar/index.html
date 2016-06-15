@@ -6,22 +6,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
     <style>
-        body {
-            font-family: sans-serif;
-        }
-        
-        a,
-        a:hover,
-        a:visited,
-        a:active,
-        a:focus {
-            color: blue;
-        }
-        
-        #contact {
-            position: absolute;
-            bottom: 0;
-        }
+        body { font-family: sans-serif; } 
+        a, a:hover, a:visited, a:active, a:focus { color: blue; }
+        #contact { position: absolute; bottom: 0; }
     </style>
 </head>
 
@@ -38,14 +25,13 @@
 
     <script>
         var avatar = {
-            scene: null
-            , camera: null
-            , renderer: null
-            , container: null
-            , controls: null
-            , clock: null
-            , stats: null,
-
+            scene: null, 
+            camera: null, 
+            renderer: null, 
+            container: null, 
+            controls: null, 
+            clock: null, 
+            stats: null,
             init: function () { // Initialization
 
                 // create main scene
@@ -88,17 +74,6 @@
                 this.controls.target = new THREE.Vector3(0, 0, 0);
                 this.controls.maxDistance = 2000;
 
-                // prepare clock
-                this.clock = new THREE.Clock();
-
-                // prepare stats
-                // this.stats = new Stats();
-                // this.stats.domElement.style.position = 'absolute';
-                // this.stats.domElement.style.left = '50px';
-                // this.stats.domElement.style.bottom = '50px';
-                // this.stats.domElement.style.zIndex = 1;
-                // this.container.appendChild( this.stats.domElement );
-
                 // ambient light
                 var ambient = new THREE.AmbientLight(0x666666);
                 this.scene.add(ambient);
@@ -107,27 +82,20 @@
                 var hemi = new THREE.HemisphereLight(0xffffbb, 0x080820, .7);
                 this.scene.add(hemi);
 
-                // White directional light at half intensity shining from the right.
-                var directionalLight = new THREE.DirectionalLight(0xffffff, 0.2);
+                // White directional light at half intensity shining from the upper right.
+                var directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
                 directionalLight.position.set(1, .5, 0);
                 directionalLight.shadowDarkness = 0.2;
                 this.scene.add(directionalLight);
 
-                // add simple ground
-                // var ground = new THREE.Mesh( new THREE.PlaneGeometry(200, 200, 10, 10), new THREE.MeshLambertMaterial({color:0x999999}) );
-                // ground.receiveShadow = true;
-                // ground.position.set(0, -60, 0);
-                // ground.rotation.x = -Math.PI / 2;
-                // this.scene.add(ground);
-
                 // load a model
                 this.loadModel();
-            }
-            , loadModel: function () {
+            },
+            
+            loadModel: function () {
                 // prepare loader and load the model
                 var oLoader = new THREE.OBJMTLLoader();
                 oLoader.load('obj/lm/lm.obj', 'obj/lm/lm.mtl', function (object) {
-
                     object.position.x = 0;
                     object.position.y = 0;
                     object.position.z = 0;
@@ -135,7 +103,6 @@
                     object.scale.set(400, 400, 400);
                     avatar.scene.add(object);
                 });
-
             }
         };
 
@@ -149,7 +116,6 @@
         // Update controls and stats
         function update() {
             avatar.controls.update(avatar.clock.getDelta());
-            // avatar.stats.update();
         }
 
         // Render the scene
@@ -171,9 +137,5 @@
             window.attachEvent('onload', initializeAvatar);
         else window.onload = initializeAvatar;
     </script>
-
-
-
 </body>
-
 </html>
