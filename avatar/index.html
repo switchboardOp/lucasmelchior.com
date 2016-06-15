@@ -4,10 +4,15 @@
 		<title>three.js webgl - OBJLoader + MTLLoader</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<style>
+		body {font-family: sans;}
+		a, a:hover, a:visited, a:active, a:focus {color: blue;}
+		</style>
 	</head>
 
 	<body>
-
+	<div> lucas.melchior | <a href="mailto:switchboard.op@gmail.com"> switchboard.op@gmail.com </a> </div>
+		
 		<script src="js/three.min.js"></script>
 		<script src="js/THREEx.WindowResize.js"></script>
 		<script src="js/OrbitControls.js"></script>
@@ -135,17 +140,17 @@
 			  }
 			}
 
-			// Initialize lesson on page load
-			function initializeLesson() {
+			// Initialize Avatar on page load
+			function initializeAvatar() {
 			  avatar.init();
 			  animate();
 			}
 
 			if (window.addEventListener)
-			  window.addEventListener('load', initializeLesson, false);
+			  window.addEventListener('load', initializeAvatar, false);
 			else if (window.attachEvent)
-			  window.attachEvent('onload', initializeLesson);
-			else window.onload = initializeLesson;
+			  window.attachEvent('onload', initializeAvatar);
+			else window.onload = initializeAvatar;
 			
 		
 		</script>
