@@ -4,30 +4,17 @@
 		<title>three.js webgl - OBJLoader + MTLLoader</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-		<style>
-			body {
-				font-family: Monospace;
-				background-color: #fff;
-				color: #000;
-				margin: 0px;
-				overflow: hidden;
-			}
-		</style>
 	</head>
 
 	<body>
-		<div id="info">
-		AVATAR
-		</div>
 
 		<script src="js/three.min.js"></script>
-		<script src="js/loaders/OBJLoader.js"></script>
-		<script src="js/threex.windowresize.js"></script>
-		<script src="js/controls/OrbitControls.js"></script>
-		<script src="js/libs/stats.min.js"></script>
-		
-		<script src="js/loaders/MTLLoader.js"></script>
-		<script src="js/loaders/OBJMTLLoader.js"></script>
+		<script src="js/THREEx.WindowResize.js"></script>
+		<script src="js/OrbitControls.js"></script>
+		<script src="js/stats.min.js"></script>
+		<script src="js/OBJLoader.js"></script>
+		<script src="js/MTLLoader.js"></script>
+		<script src="js/OBJMTLLoader.js"></script>
 
 		<script>
 				
@@ -44,7 +31,7 @@
 
 				// create main scene
 				this.scene = new THREE.Scene();
-				this.scene.fog = new THREE.FogExp2(0xcce0ff, 0.0003);
+				this.scene.fog = new THREE.FogExp2(0xffffff, 0.0003);
 
 				var SCREEN_WIDTH = window.innerWidth,
 					SCREEN_HEIGHT = window.innerHeight;
@@ -62,6 +49,7 @@
 				this.renderer.setClearColor(this.scene.fog.color);
 				this.renderer.shadowMapEnabled = true;
 				this.renderer.shadowMapSoft = true;
+				this.renderer.shadowMapType = THREE.PCFSoftShadowMap;
 
 				// prepare container
 				this.container = document.createElement('div');
@@ -80,25 +68,33 @@
 				this.clock = new THREE.Clock();
 
 				// prepare stats
-				this.stats = new Stats();
-				this.stats.domElement.style.position = 'absolute';
-				this.stats.domElement.style.left = '50px';
-				this.stats.domElement.style.bottom = '50px';
-				this.stats.domElement.style.zIndex = 1;
-				this.container.appendChild( this.stats.domElement );
+				// this.stats = new Stats();
+				// this.stats.domElement.style.position = 'absolute';
+				// this.stats.domElement.style.left = '50px';
+				// this.stats.domElement.style.bottom = '50px';
+				// this.stats.domElement.style.zIndex = 1;
+				// this.container.appendChild( this.stats.domElement );
 
-				// add spot light
-				var spLight = new THREE.SpotLight(0xffffff, 1.75, 2000, Math.PI / 3);
-				spLight.castShadow = true;
-				spLight.position.set(-100, 300, -50);
-				this.scene.add(spLight);
-
+				// ambient light
+				var ambient = new THREE.AmbientLight( 0x666666 );
+				this.scene.add( ambient );
+				
+				// hemisphere
+				var hemi = new THREE.HemisphereLight( 0xffffbb, 0x080820, .7 );
+				this.scene.add( hemi );
+				
+				// White directional light at half intensity shining from the right.
+				var directionalLight = new THREE.DirectionalLight( 0xffffff, 0.2 );
+				directionalLight.position.set( 1, .5, 0 );
+				directionalLight.shadowDarkness = 0.2;
+				this.scene.add( directionalLight );
+				
 				// add simple ground
-				var ground = new THREE.Mesh( new THREE.PlaneGeometry(200, 200, 10, 10), new THREE.MeshLambertMaterial({color:0x999999}) );
-				ground.receiveShadow = true;
-				ground.position.set(0, 0, 0);
-				ground.rotation.x = -Math.PI / 2;
-				this.scene.add(ground);
+				// var ground = new THREE.Mesh( new THREE.PlaneGeometry(200, 200, 10, 10), new THREE.MeshLambertMaterial({color:0x999999}) );
+				// ground.receiveShadow = true;
+				// ground.position.set(0, -60, 0);
+				// ground.rotation.x = -Math.PI / 2;
+				// this.scene.add(ground);
 
 				// load a model
 				this.loadModel();
@@ -106,14 +102,15 @@
 			  loadModel: function() {
 				// prepare loader and load the model
 				var oLoader = new THREE.OBJMTLLoader();
-				oLoader.load('obj/lm/model_mesh.obj', 'obj/lm/model_mesh.obj.mtl', function(object) {
+				oLoader.load('obj/lm/lm.obj', 'obj/lm/lm.mtl', function(object) {
 
-				  object.position.x = -200;
-				  object.position.y = 0;
-				  object.position.z = 100;
-				  object.scale.set(0.1, 0.1, 0.1);
-				  lesson6.scene.add(object);
-				});
+				object.position.x = 0;
+				object.position.y = 0;
+				object.position.z = 0;
+				object.rotation.x = 75;
+				object.scale.set(400, 400, 400);
+				avatar.scene.add(object);
+				}); 
 				
 			  }
 			};
