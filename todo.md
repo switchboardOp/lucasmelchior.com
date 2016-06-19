@@ -1,3 +1,6 @@
-- [ ] add LM bust
+- [x] add LM bust
 - [ ] minimize layout / splash
 - [ ] add color
+- [ ] education
+- [ ] volunteer
+- [ ] include github
