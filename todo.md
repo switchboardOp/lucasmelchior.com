@@ -1,6 +1,8 @@
 - [x] add LM bust
 - [ ] minimize layout / splash
-- [ ] add color
+- [ ] add color yellow
 - [ ] education
 - [ ] volunteer
-- [ ] include github
+- [ ] include github svg
+- [ ] corner
+- [ ] preload gif
