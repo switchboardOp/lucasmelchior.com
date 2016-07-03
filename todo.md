@@ -1,6 +1,7 @@
 - [x] add LM bust
-- [ ] minimize layout / splash
-- [ ] add color yellow
+- [x] splash
+- [ ] minimize layout
+- [ ] add colorful images
 - [ ] education
 - [ ] volunteer
 - [ ] include github svg
