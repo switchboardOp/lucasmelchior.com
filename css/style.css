@@ -156,7 +156,7 @@ blockquote::after {
         border-left: 2px solid #b70000; } }
 
 .footer-logos {
-  width: 70px; }
+  min-width: 100px; }
 
 .footer-logo {
   fill: white;

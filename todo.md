@@ -1,9 +1,9 @@
 - [x] add LM bust
 - [x] splash
+- [x] ssl
 - [ ] minimize layout
-- [ ] add colorful images
 - [ ] education
 - [ ] volunteer
-- [ ] include github svg
+- [x] include github svg
 - [ ] corner
-- [ ] preload gif
+- [ ] preload gif for avatar
