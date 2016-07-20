@@ -7,3 +7,4 @@
 - [x] include github svg
 - [ ] corner
 - [ ] preload gif for avatar
+- [ ] parallax
