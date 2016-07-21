@@ -5,22 +5,14 @@
     <title>lucasmelchior.com | avatar</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-		<style>
-        body { font-family: sans-serif; overflow: hidden;} 
-        a, a:hover, a:visited, a:active, a:focus { color: #f2ba00; }
-        #contact {
-					background: rgba(0,0,0,.8);
-					color: white;
-					width: 100%;
-					padding: 30px;
-					position: absolute;
-					bottom: 0;
-					left: 0;
-			}
-    </style>
+  	<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+  	<div id="loader" class="absolute-center">
+        <div class="loading"></div>
+        <div class="loader-text">Loading...</div>
+  </div>
     <div id="contact"> 
 			lucas.melchior | <a href="mailto:switchboard.op@gmail.com">switchboard.op@gmail.com</a> | <a href="../" >index</a>
 	</div>
@@ -28,8 +20,8 @@
     <script src="js/three.min.js"></script>
     <script src="js/THREEx.WindowResize.js"></script>
     <script src="js/OrbitControls.js"></script>
-		<script src="js/OBJMTLLoader.js"></script>
-		<script src="js/OBJLoader.js"></script>
+    <script src="js/OBJMTLLoader.js"></script>
+    <script src="js/OBJLoader.js"></script>
     <script src="js/MTLLoader.js"></script>
 
     <script>
@@ -110,6 +102,7 @@
                     object.rotation.x = 75;
                     object.scale.set(400, 400, 400);
                     avatar.scene.add(object);
+                    hideLoader();
                 });
             }
         };
@@ -140,14 +133,20 @@
         }
 
         if (window.addEventListener) {
-					window.addEventListener('load', initializeAvatar, false);
+				    window.addEventListener('load', initializeAvatar, false);
 				}
         else if (window.attachEvent) {
-					window.attachEvent('onload', initializeAvatar);
+				    window.attachEvent('onload', initializeAvatar);
 				}
         else {
-					window.onload = initializeAvatar;
+				    window.onload = initializeAvatar;
 				}
+				// Hide loading animation
+        function hideLoader() {
+            var div = document.getElementById("loader");
+            div.addEventListener("transitionend", function(){ div.style.display = 'none'; }, false);
+            div.className += ' hidden';
+        }
 	</script>
 </body>
 </html>

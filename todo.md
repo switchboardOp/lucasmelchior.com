@@ -6,5 +6,5 @@
 - [ ] volunteer
 - [x] include github svg
 - [ ] corner
-- [ ] preload gif for avatar
+- [x] preload animation for avatar
 - [ ] parallax

@@ -1,0 +1,64 @@
+.absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+
+body {
+  font-family: sans-serif;
+  overflow: hidden; }
+
+div {
+  margin: 0; }
+
+a, a:hover, a:visited, a:active, a:focus {
+  color: #f2ba00; }
+
+#contact {
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  width: 100%;
+  padding: 30px;
+  position: absolute;
+  bottom: 0;
+  left: 0; }
+
+#loader {
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  min-width: 20%;
+  border-radius: 10px;
+  opacity: 0;
+  -webkit-transition: all 3s ease;
+  -moz-transition: all 3s ease;
+  -ms-transition: all 3s ease;
+  -o-transition: all 3s ease;
+  opacity: 1; }
+
+#loader.hidden {
+  opacity: 0;
+  scale: 0.5; }
+
+.loader-text {
+  padding: 10px; }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+.loading {
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  border: 0.25rem solid rgba(255, 255, 255, 0.2);
+  border-top-color: white;
+  animation: spin 1s infinite linear;
+  margin: 10px auto;
+  padding: 10px; }
+
+/*# sourceMappingURL=style.css.map */
