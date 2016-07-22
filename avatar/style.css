@@ -40,11 +40,13 @@ a, a:hover, a:visited, a:active, a:focus {
   opacity: 1; }
 
 #loader.hidden {
-  opacity: 0;
-  scale: 0.5; }
+  opacity: 0; }
 
-.loader-text {
+.loader-text, loader-alert {
   padding: 10px; }
+
+.loader-alert {
+  color: #f2ba00; }
 
 @keyframes spin {
   0% {

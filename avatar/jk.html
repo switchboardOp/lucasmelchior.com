@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>lucasmelchior.com | avatar</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  	<div id="loader" class="absolute-center">
+        <div class="loading"></div>
+        <div class="loader-text">Loading...</div>
+  </div>
+    <div id="contact"> 
+        john.keston | <a href="http://audiocookbook.com">audiocookbook.com</a>
+	</div>
+
+    <script src="js/three.min.js"></script>
+    <script src="js/THREEx.WindowResize.js"></script>
+    <script src="js/OrbitControls.js"></script>
+    <script src="js/OBJMTLLoader.js"></script>
+    <script src="js/OBJLoader.js"></script>
+    <script src="js/MTLLoader.js"></script>
+
+    <script>
+        var avatar = {
+            scene: null, 
+            camera: null, 
+            renderer: null, 
+            container: null, 
+            controls: null, 
+            clock: new THREE.Clock,
+            init: function () { // Initialization
+
+                // create main scene
+                this.scene = new THREE.Scene();
+                this.scene.fog = new THREE.FogExp2(0xffffff, 0.0003);
+
+                var SCREEN_WIDTH = window.innerWidth, 
+                    SCREEN_HEIGHT = window.innerHeight;
+
+                // prepare camera
+                var VIEW_ANGLE = 45, 
+                    ASPECT = SCREEN_WIDTH / SCREEN_HEIGHT, 
+                    NEAR = 10, 
+                    FAR = 2000;
+                this.camera = new THREE.PerspectiveCamera(VIEW_ANGLE, ASPECT, NEAR, FAR);
+                this.scene.add(this.camera);
+                this.camera.position.set(0, 100, 300);
+                this.camera.lookAt(new THREE.Vector3(0, 0, 0));
+
+                // prepare renderer
+                this.renderer = new THREE.WebGLRenderer({
+                    antialias: true
+                });
+                this.renderer.setSize(SCREEN_WIDTH, SCREEN_HEIGHT);
+                this.renderer.setClearColor(this.scene.fog.color);
+                this.renderer.shadowMapEnabled = true;
+                this.renderer.shadowMapSoft = true;
+                this.renderer.shadowMapType = THREE.PCFSoftShadowMap;
+
+                // prepare container
+                this.container = document.createElement('div');
+                document.body.appendChild(this.container);
+                this.container.appendChild(this.renderer.domElement);
+
+                // events
+                THREEx.WindowResize(this.renderer, this.camera);
+
+                // prepare controls (OrbitControls)
+                this.controls = new THREE.OrbitControls(this.camera, this.renderer.domElement);
+                this.controls.target = new THREE.Vector3(0, 0, 0);
+                this.controls.maxDistance = 2000;
+
+                // ambient light
+                var ambient = new THREE.AmbientLight(0x666666);
+                this.scene.add(ambient);
+
+                // hemisphere
+                var hemi = new THREE.HemisphereLight(0xffffbb, 0x080820, .7);
+                this.scene.add(hemi);
+
+                // White directional light at half intensity shining from the upper right.
+                var directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
+                directionalLight.position.set(1, .5, 0);
+                directionalLight.shadowDarkness = 0.2;
+                this.scene.add(directionalLight);
+
+                // load a model
+                this.loadModel();
+            },
+            
+            loadModel: function () {
+                // prepare loader and load the model
+                var oLoader = new THREE.OBJMTLLoader();
+                oLoader.load('obj/jk/model_mesh.obj', 'obj/jk/model_mesh.mtl', function (object) {
+                    object.position.x = 0;
+                    object.position.y = 0;
+                    object.position.z = 0;
+                    object.rotation.x = 75;
+                    object.scale.set(400, 400, 400);
+                    avatar.scene.add(object);
+                    hideLoader();
+                });
+            }
+        };
+
+        // Animate the scene
+        function animate() {
+            requestAnimationFrame(animate);
+            render();
+            update();
+        }
+
+        // Update controls and stats
+        function update() {
+            avatar.controls.update(avatar.clock.getDelta());
+        }
+
+        // Render the scene
+        function render() {
+            if (avatar.renderer) {
+                avatar.renderer.render(avatar.scene, avatar.camera);
+            }
+        }
+
+        // Initialize Avatar on page load
+        function initializeAvatar() {
+            avatar.init();
+            animate();
+        }
+
+        if (window.addEventListener) {
+				    window.addEventListener('load', initializeAvatar, false);
+				}
+        else if (window.attachEvent) {
+				    window.attachEvent('onload', initializeAvatar);
+				}
+        else {
+				    window.onload = initializeAvatar;
+				}
+				// Hide loading animation
+        function hideLoader() {
+            var div = document.getElementById("loader");
+            div.addEventListener("transitionend", function(){ div.style.display = 'none'; }, false);
+            div.className += ' hidden';
+        }
+	</script>
+</body>
+</html>
