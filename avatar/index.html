@@ -37,7 +37,7 @@
 
                 // create main scene
                 this.scene = new THREE.Scene();
-                this.scene.fog = new THREE.FogExp2(0xffffff, 0.0003);
+                this.scene.fog = new THREE.FogExp2(0x000000, 0.0003);
 
                 var SCREEN_WIDTH = window.innerWidth, 
                     SCREEN_HEIGHT = window.innerHeight;
@@ -54,10 +54,11 @@
 
                 // prepare renderer
                 this.renderer = new THREE.WebGLRenderer({
-                    antialias: true
+                    antialias: true,
+                    alpha: true
                 });
                 this.renderer.setSize(SCREEN_WIDTH, SCREEN_HEIGHT);
-                this.renderer.setClearColor(this.scene.fog.color);
+                this.renderer.setClearColor(this.scene.fog.color, 0);
                 this.renderer.shadowMapEnabled = true;
                 this.renderer.shadowMapSoft = true;
                 this.renderer.shadowMapType = THREE.PCFSoftShadowMap;

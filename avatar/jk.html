@@ -2,10 +2,14 @@
 <html lang="en">
 
 <head>
-    <title>lucasmelchior.com | avatar</title>
+    <title>john.keston | avatar</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
   	<link rel="stylesheet" href="style.css">
+    <style>body{
+        background:url('img/jk-bg.gif');
+        background-size:cover;
+        }</style>
 </head>
 
 <body>
@@ -14,7 +18,7 @@
         <div class="loader-text">Loading...</div>
   </div>
     <div id="contact"> 
-        john.keston | <a href="http://audiocookbook.com">audiocookbook.com</a>
+        john.keston | <a href="http://audiocookbook.org">audiocookbook.org</a>
 	</div>
 
     <script src="js/three.min.js"></script>
@@ -36,7 +40,7 @@
 
                 // create main scene
                 this.scene = new THREE.Scene();
-                this.scene.fog = new THREE.FogExp2(0xffffff, 0.0003);
+                this.scene.fog = new THREE.FogExp2(0x000000, 0.0003);
 
                 var SCREEN_WIDTH = window.innerWidth, 
                     SCREEN_HEIGHT = window.innerHeight;
@@ -53,10 +57,11 @@
 
                 // prepare renderer
                 this.renderer = new THREE.WebGLRenderer({
-                    antialias: true
+                    antialias: true,
+                    alpha: true
                 });
                 this.renderer.setSize(SCREEN_WIDTH, SCREEN_HEIGHT);
-                this.renderer.setClearColor(this.scene.fog.color);
+                this.renderer.setClearColor(this.scene.fog.color, 0);
                 this.renderer.shadowMapEnabled = true;
                 this.renderer.shadowMapSoft = true;
                 this.renderer.shadowMapType = THREE.PCFSoftShadowMap;
@@ -75,15 +80,15 @@
                 this.controls.maxDistance = 2000;
 
                 // ambient light
-                var ambient = new THREE.AmbientLight(0x666666);
+                var ambient = new THREE.AmbientLight(0x00baf2);
                 this.scene.add(ambient);
 
                 // hemisphere
-                var hemi = new THREE.HemisphereLight(0xffffbb, 0x080820, .7);
+                var hemi = new THREE.HemisphereLight(0xffffff, 0x080f20, .7);
                 this.scene.add(hemi);
 
                 // White directional light at half intensity shining from the upper right.
-                var directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
+                var directionalLight = new THREE.DirectionalLight(0x0089ff, 0.5);
                 directionalLight.position.set(1, .5, 0);
                 directionalLight.shadowDarkness = 0.2;
                 this.scene.add(directionalLight);

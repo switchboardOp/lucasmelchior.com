@@ -8,13 +8,24 @@
 
 body {
   font-family: sans-serif;
-  overflow: hidden; }
+  overflow: hidden;
+  background: url("img/dot-bg.jpg");
+  background-size: cover; }
 
 div {
   margin: 0; }
 
 a, a:hover, a:visited, a:active, a:focus {
   color: #f2ba00; }
+
+small {
+  font-size: 9px; }
+
+.bug {
+  color: white;
+  position: absolute;
+  bottom: 0;
+  right: 0; }
 
 #contact {
   background: rgba(0, 0, 0, 0.8);
@@ -38,9 +49,8 @@ a, a:hover, a:visited, a:active, a:focus {
   -ms-transition: all 3s ease;
   -o-transition: all 3s ease;
   opacity: 1; }
-
-#loader.hidden {
-  opacity: 0; }
+  #loader.hidden {
+    opacity: 0; }
 
 .loader-text, loader-alert {
   padding: 10px; }
