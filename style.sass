@@ -30,6 +30,12 @@ body
         transform: scale(1)
         opacity: 1
         
+// squares all corners
+* 
+    -webkit-border-radius: 0 !important
+    -moz-border-radius: 0 !important
+    border-radius: 0 !important
+        
 .absolute-center
     position: absolute
     top: 50%
@@ -135,6 +141,7 @@ a
 blockquote
     display: block
     padding: 40px 20px 15px 70px
+    margin: 0
     position: relative
   
     /*Font*/
@@ -193,7 +200,6 @@ blockquote::after
     h4
         font 
 
-
 .modal-body
     p
         margin: 0 30px 30px 30px
@@ -206,29 +212,43 @@ blockquote::after
 .btn-default
     background: $red
     color: $white
-  
-    // squares all corners
-* 
-    -webkit-border-radius: 0 !important
-    -moz-border-radius: 0 !important
-    border-radius: 0 !important
 
-//.panel-heading
-    background: $grey
-    color: $white
-
-.accordion-toggle .panel-heading>h4:after 
+.accordion-toggle .panel-heading:after 
     // symbol for open panels
-    font-family: 'Glyphicons Halflings' 
-    content: "\e252"   
+    font-family: 'Glyphicons Halflings'
+    position: relative
+    top: -25px
+    content: "\e252"
+    color: $red
     float: right      
 
-.accordion-toggle.collapsed .panel-heading>h4:after 
+.accordion-toggle.collapsed .panel-heading:after 
     // symbol for collapsed panels
     content: "\e250"
     float: right
+    color: $black
 
-.panel-heading, .panel-body
-    padding: 0 15px 0 15px
+.panel-heading
+    padding: 0 15px 
     h4
         margin: 5px 0
+    
+.panel-body
+    padding: 0 35px
+    position: relative
+    //top: -10px
+
+.accordion-toggle > .panel-heading > h4
+    transform-origin: left
+    transform: rotate(90deg)
+    transform: rotateZ(90deg)
+    -webkit-transition: all .2s ease
+    -moz-transition: all .2s ease
+    -ms-transition: all .2s ease
+    -o-transition: all .2s ease
+    color: $red
+    
+.accordion-toggle.collapsed > .panel-heading > h4
+    transform: rotate(0deg)
+    color: inherit
+        

@@ -1,12 +1,21 @@
-- [x] add LM bust
+# Main Page
 - [x] splash
 - [x] ssl
 - [ ] minimize layout
-- [ ] vertical headings
-- [ ] education
+- [x] vertical headings on disclosure
+- [ ] fix a tag in skills section
+- [x] education
 - [ ] volunteer
 - [x] include github svg
-- [ ] corner model
-- [x] preload animation for avatar
+- [ ] corner model (low poly)
 - [ ] parallax
-- [ ] trio
+- [ ] page transitions
+
+# Avatar
+- [x] add LM bust
+- [x] preload animation for avatar
+- [ ] decimate models
+    - [ ] lm
+    - [ ] cl
+    - [ ] jk
+- [ ] trio display
