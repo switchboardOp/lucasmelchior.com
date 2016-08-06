@@ -8,6 +8,7 @@
 
 body {
   font-family: sans-serif;
+  margin: 0;
   overflow: hidden;
   background: url("img/dot-bg.jpg");
   background-size: cover; }
@@ -24,8 +25,8 @@ small {
 .bug {
   color: white;
   position: absolute;
-  bottom: 0;
-  right: 0; }
+  bottom: 5px;
+  right: 5px; }
 
 #contact {
   background: rgba(0, 0, 0, 0.8);

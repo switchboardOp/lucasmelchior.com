@@ -2,9 +2,11 @@
 - [x] splash
 - [x] ssl
 - [ ] minimize layout
+- [ ] vertical headings
 - [ ] education
 - [ ] volunteer
 - [x] include github svg
-- [ ] corner
+- [ ] corner model
 - [x] preload animation for avatar
 - [ ] parallax
+- [ ] trio
