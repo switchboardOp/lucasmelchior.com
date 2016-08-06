@@ -31,17 +31,17 @@ body {
 .full-height {
   height: 100%; }
 
+.inline-block {
+  display: inline-block; }
+
 a {
   color: black; }
   a:hover, a:focus, a:active {
     color: #b70000;
     text-decoration: none; }
 
-.red {
+.main-color {
   color: #b70000; }
-
-.red-bg {
-  background: #b70000; }
 
 .contact {
   padding: 0; }
@@ -154,7 +154,13 @@ blockquote::after {
     #footer a:hover, #footer a:active {
       color: #b70000;
       text-decoration: none; }
-  @media screen and (max-width: 715px) {
+  #footer .contact {
+    float: left;
+    margin-top: 40px; }
+    @media screen and (max-width: 700px) {
+      #footer .contact {
+        margin-top: 20px; } }
+  @media screen and (max-width: 700px) {
     #footer .contact > li {
       padding: 0 0 0 5px;
       display: block; }
@@ -162,7 +168,14 @@ blockquote::after {
         border-left: 2px solid #b70000; } }
 
 .footer-logos {
-  min-width: 100px; }
+  min-width: 100px;
+  padding: 38px 5px 10px 20px;
+  float: right;
+  display: block; }
+  @media screen and (max-width: 405px) {
+    .footer-logos {
+      float: left;
+      padding: 0 0 10px 0; } }
 
 .footer-logo {
   fill: white;

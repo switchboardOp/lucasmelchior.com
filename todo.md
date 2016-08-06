@@ -1,12 +1,15 @@
 # Main Page
 - [x] splash
 - [x] ssl
+- [ ] add resume
+- [ ] fix footer icons
 - [ ] minimize layout
 - [x] vertical headings on disclosure
 - [ ] fix a tag in skills section
 - [x] education
 - [ ] volunteer
 - [x] include github svg
+- [ ] sticky header
 - [ ] corner model (low poly)
 - [ ] parallax
 - [ ] page transitions

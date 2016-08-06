@@ -1,10 +1,11 @@
-$red: rgb(183, 0, 0)
+$main-color: rgb(183, 0, 0)
 $white: white
 $black: black
 $grey: grey
 
 $mobile-break: 520px
-$footer-break: 715px
+$footer-break: 700px
+$footer-logo-break: 405px
 $award-break-1: 730px
 $award-break-2: 570px
 
@@ -49,18 +50,18 @@ body
 
 .full-height
     height: 100%
+    
+.inline-block
+    display: inline-block
         
 a
     color: $black
     &:hover, &:focus, &:active
-        color: $red
+        color: $main-color
         text-decoration: none
 
-.red
-    color: $red
-    
-.red-bg
-    background: $red
+.main-color
+    color: $main-color
     
 .contact  
     padding: 0
@@ -68,12 +69,12 @@ a
         list-style: none
         display: inline-block
         padding: 0 3px 0 5px
-        border-left: 2px solid $red
+        border-left: 2px solid $main-color
         @media screen and (max-width: $mobile-break)
             padding: 0 0 0 5px
             display: block
             &.first
-                border-left: 2px solid $red
+                border-left: 2px solid $main-color
     .first
         border: 0px
     
@@ -149,7 +150,7 @@ blockquote
     text-align: justify
   
     /*Borders - (Optional)*/
-    border-right: 2px solid $red
+    border-right: 2px solid $main-color
     border-left: 0
     &::before
         content: "\201C" // Unicode for Left Double Quote
@@ -172,17 +173,28 @@ blockquote::after
     a 
         color: $white
         &:hover, &:active
-            color: $red
+            color: $main-color
             text-decoration: none
+    .contact 
+        float: left
+        margin-top: 40px
+        @media screen and (max-width: $footer-break)
+            margin-top: 20px
     .contact > li
         @media screen and (max-width: $footer-break)
             padding: 0 0 0 5px
             display: block
             &.first 
-                border-left: 2px solid $red
+                border-left: 2px solid $main-color
         
 .footer-logos
     min-width: 100px
+    padding: 38px 5px 10px 20px
+    float: right
+    display: block
+    @media screen and (max-width: $footer-logo-break)
+        float: left
+        padding: 0 0 10px 0
     
 .footer-logo
     fill: $white
@@ -195,22 +207,18 @@ blockquote::after
     .close
         color: $white
         opacity: .8
-
-.modal-title
-    h4
-        font 
-
+            
 .modal-body
     p
         margin: 0 30px 30px 30px
         font-size: 1.2em
     a 
-        color: $red
+        color: $main-color
     img.center-block
         margin-bottom: 30px
       
 .btn-default
-    background: $red
+    background: $main-color
     color: $white
 
 .accordion-toggle .panel-heading:after 
@@ -219,7 +227,7 @@ blockquote::after
     position: relative
     top: -25px
     content: "\e252"
-    color: $red
+    color: $main-color
     float: right      
 
 .accordion-toggle.collapsed .panel-heading:after 
@@ -246,7 +254,7 @@ blockquote::after
     -moz-transition: all .2s ease
     -ms-transition: all .2s ease
     -o-transition: all .2s ease
-    color: $red
+    color: $main-color
     
 .accordion-toggle.collapsed > .panel-heading > h4
     transform: rotate(0deg)
