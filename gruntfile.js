@@ -1,29 +1,29 @@
 module.exports = function (grunt) {
 	grunt.initConfig({
-		pkg: grunt.file.readJSON('package.json')
-		, sass: {
+		pkg: grunt.file.readJSON('package.json'),
+		sass: {
 			dist: {
 				files: {
 					'css/style.css': 'style.sass',
 					'avatar/style.css': 'avatar/style.sass'
 				}
 			}
-		}
-		, cssmin: {
+		},
+		cssmin: {
 			options: {
-				shorthandCompacting: false
-				, roundingPrecision: -1
-			}
-			, target: {
+				shorthandCompacting: false,
+				roundingPrecision: -1
+			},
+			target: {
 				files: {
 					'css/style.min.css': 'css/style.css'
 				}
 			}
-		}
-		, watch: {
+		},
+		watch: {
 			css: {
-				files: '**/*.sass'
-				, tasks: ['sass', 'cssmin']
+				files: '**/*.sass',
+				tasks: ['sass', 'cssmin']
 			}
 		}
 	});
