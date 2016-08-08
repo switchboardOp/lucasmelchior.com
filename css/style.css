@@ -22,14 +22,6 @@ body {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%); }
 
-.relative-center {
-  position: relative;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%); }
-
 .vertical-center {
   position: absolute;
   top: 50%;
@@ -141,9 +133,10 @@ a {
 
 blockquote {
   display: block;
-  padding: 40px 20px 15px 70px;
-  margin: 0;
+  padding: 40px 20px 245px 70px;
+  margin: 0 0 -210px 0;
   position: relative;
+  z-index: -1;
   /*Font */
   font-size: 16px;
   text-align: justify;
