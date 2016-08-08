@@ -2,12 +2,15 @@
 - [x] splash
 - [x] ssl
 - [ ] build script
+- [ ] add resume
+- [x] fix footer icons
 - [ ] minimize layout
 - [x] vertical headings on disclosure
 - [ ] fix a tag in skills section
 - [x] education
 - [ ] volunteer
 - [x] include github svg
+- [ ] sticky header
 - [ ] corner model (low poly)
 - [ ] parallax
 - [ ] page transitions
