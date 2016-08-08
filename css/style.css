@@ -159,7 +159,8 @@ blockquote::after {
     margin-top: 40px; }
     @media screen and (max-width: 700px) {
       #footer .contact {
-        margin-top: 20px; } }
+        margin-top: 20px;
+        margin-right: 20px; } }
   @media screen and (max-width: 700px) {
     #footer .contact > li {
       padding: 0 0 0 5px;
@@ -172,7 +173,7 @@ blockquote::after {
   padding: 38px 5px 10px 20px;
   float: right;
   display: block; }
-  @media screen and (max-width: 405px) {
+  @media screen and (max-width: 400px) {
     .footer-logos {
       float: left;
       padding: 0 0 10px 0; } }

@@ -2,7 +2,7 @@
 - [x] splash
 - [x] ssl
 - [ ] add resume
-- [ ] fix footer icons
+- [x] fix footer icons
 - [ ] minimize layout
 - [x] vertical headings on disclosure
 - [ ] fix a tag in skills section
@@ -18,7 +18,7 @@
 - [x] add LM bust
 - [x] preload animation for avatar
 - [ ] decimate models
-    - [ ] lm
-    - [ ] cl
-    - [ ] jk
+	- [ ] lm
+	- [ ] cl
+	- [ ] jk
 - [ ] trio display
