@@ -1,7 +1,8 @@
 @charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600);
 body {
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Open Sans", sans-serif;
+  background: white; }
 
 @keyframes flyin {
   to {
@@ -80,6 +81,8 @@ a {
 .hero {
   background: url("../img/mode-off.jpg") 50% 50% no-repeat;
   background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
   color: white; }
   .hero p {
     animation: flyin 2s ease forwards;
@@ -202,21 +205,21 @@ blockquote::after {
   background: #b70000;
   color: white; }
 
-.accordion-toggle .panel-heading:after {
+a.accordion-toggle:after {
   font-family: "Glyphicons Halflings";
   position: relative;
-  top: -25px;
+  top: 5px;
   content: "";
   color: #b70000;
   float: right; }
 
-.accordion-toggle.collapsed .panel-heading:after {
+a.accordion-toggle.collapsed:after {
   content: "";
-  float: right;
   color: black; }
 
 .panel-heading {
-  padding: 0 15px; }
+  padding: 0 15px;
+  display: inline-block; }
   .panel-heading h4 {
     margin: 5px 0; }
 
@@ -224,17 +227,16 @@ blockquote::after {
   padding: 0 35px;
   position: relative; }
 
-.accordion-toggle > .panel-heading > h4 {
+.accordion-toggle > .panel-heading, .accordion-toggle {
   transform-origin: left;
   transform: rotate(90deg);
-  transform: rotateZ(90deg);
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
   -ms-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   color: #b70000; }
 
-.accordion-toggle.collapsed > .panel-heading > h4 {
+.accordion-toggle.collapsed > .panel-heading, .accordion-toggle.collapsed {
   transform: rotate(0deg);
   color: inherit; }
 

@@ -2,11 +2,10 @@
 - [ ] build script
 - [ ] add resume
 - [ ] minimize layout
-- [ ] fix a tag in skills section
+- [x] fix a tag in skills section
 - [ ] volunteer
 - [ ] sticky header
 - [ ] corner model (low poly)
-- [ ] parallax
 - [ ] page transitions
 - [ ] asymetric mask
 

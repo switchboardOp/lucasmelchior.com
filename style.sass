@@ -13,6 +13,7 @@ $award-break-2: 570px
 
 body
 		font-family: 'Open Sans', sans-serif
+		background: $white
 
 @mixin translate($x, $y)
 		-webkit-transform: translate($x, $y)
@@ -88,7 +89,7 @@ a
 				position: absolute
 				bottom: 0
 				padding: 2px 0 0 25px
-				color: white
+				color: $white
 				width: 100%
 				background: rgba(0,0,0,.5)
 
@@ -102,7 +103,9 @@ a
 		//margin-top: 169px
 		background: url('../img/mode-off.jpg') 50% 50% no-repeat
 		background-size: cover
-		color: white
+		background-attachment: fixed
+		background-position: center
+		color: $white
 		p
 				@include flyin(2, 2s)
 				padding: 10%
@@ -222,23 +225,23 @@ blockquote::after
 		background: $main-color
 		color: $white
 
-.accordion-toggle .panel-heading:after
+a.accordion-toggle:after
 		// symbol for open panels
 		font-family: 'Glyphicons Halflings'
 		position: relative
-		top: -25px
+		top: 5px
 		content: "\e252"
 		color: $main-color
 		float: right
 
-.accordion-toggle.collapsed .panel-heading:after
+a.accordion-toggle.collapsed:after
 		// symbol for collapsed panels
 		content: "\e250"
-		float: right
 		color: $black
 
 .panel-heading
 		padding: 0 15px
+		display: inline-block
 		h4
 				margin: 5px 0
 
@@ -247,16 +250,15 @@ blockquote::after
 		position: relative
 		//top: -10px
 
-.accordion-toggle > .panel-heading > h4
+.accordion-toggle > .panel-heading, .accordion-toggle
 		transform-origin: left
 		transform: rotate(90deg)
-		transform: rotateZ(90deg)
 		-webkit-transition: all .2s ease
 		-moz-transition: all .2s ease
 		-ms-transition: all .2s ease
 		-o-transition: all .2s ease
 		color: $main-color
 
-.accordion-toggle.collapsed > .panel-heading > h4
+.accordion-toggle.collapsed > .panel-heading, .accordion-toggle.collapsed
 		transform: rotate(0deg)
 		color: inherit
