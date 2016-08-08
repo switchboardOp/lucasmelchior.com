@@ -1,19 +1,22 @@
 # Main Page
-- [x] splash
-- [x] ssl
 - [ ] build script
 - [ ] add resume
-- [x] fix footer icons
 - [ ] minimize layout
-- [x] vertical headings on disclosure
 - [ ] fix a tag in skills section
-- [x] education
 - [ ] volunteer
-- [x] include github svg
 - [ ] sticky header
 - [ ] corner model (low poly)
 - [ ] parallax
 - [ ] page transitions
+- [ ] asymetric mask
+
+## Done
+- [x] splash
+- [x] ssl
+- [x] fix footer icons
+- [x] vertical headings on disclosure
+- [x] include github svg
+- [x] education
 
 # Avatar
 - [x] add LM bust
