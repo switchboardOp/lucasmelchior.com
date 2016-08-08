@@ -2,7 +2,6 @@
 - [ ] build script
 - [ ] add resume
 - [ ] minimize layout
-- [x] fix a tag in skills section
 - [ ] volunteer
 - [ ] sticky header
 - [ ] corner model (low poly)
@@ -16,6 +15,8 @@
 - [x] vertical headings on disclosure
 - [x] include github svg
 - [x] education
+- [x] fix a tag in skills section
+- [x] skyline
 
 # Avatar
 - [x] add LM bust

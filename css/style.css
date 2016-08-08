@@ -22,6 +22,14 @@ body {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%); }
 
+.relative-center {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+
 .vertical-center {
   position: absolute;
   top: 50%;
@@ -34,6 +42,14 @@ body {
 
 .inline-block {
   display: inline-block; }
+
+.flip {
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH"; }
 
 a {
   color: black; }
