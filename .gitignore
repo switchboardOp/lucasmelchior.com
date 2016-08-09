@@ -1,6 +1,7 @@
 .sass-cache/
 *.css.map
 node_modules/
+build/
 
 # Logs
 logs

@@ -4,14 +4,22 @@ body {
   font-family: "Open Sans", sans-serif;
   background: white; }
 
+@-webkit-keyframes flyin {
+  to {
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1; } }
+
 @keyframes flyin {
   to {
-    filter: blur(0);
-    transform: scale(1);
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    -webkit-transform: scale(1);
+            transform: scale(1);
     opacity: 1; } }
 * {
-  -webkit-border-radius: 0 !important;
-  -moz-border-radius: 0 !important;
   border-radius: 0 !important; }
 
 .absolute-center {
@@ -19,14 +27,12 @@ body {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%); }
 
 .vertical-center {
   position: absolute;
   top: 50%;
   -webkit-transform: translate(0, -50%);
-  -ms-transform: translate(0, -50%);
   transform: translate(0, -50%); }
 
 .full-height {
@@ -36,11 +42,10 @@ body {
   display: inline-block; }
 
 .flip {
-  -moz-transform: scaleX(-1);
-  -o-transform: scaleX(-1);
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
-  filter: FlipH;
+  -webkit-filter: FlipH;
+          filter: FlipH;
   -ms-filter: "FlipH"; }
 
 a {
@@ -87,16 +92,16 @@ a {
     font-weight: 600; }
 
 .hero {
-  background: url("../img/mode-off.jpg") 50% 50% no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
+  background: black url("../img/mode-off.jpg") no-repeat fixed center;
   color: white; }
   .hero p {
-    animation: flyin 2s ease forwards;
+    -webkit-animation: flyin 2s ease forwards;
+            animation: flyin 2s ease forwards;
     opacity: 0;
-    transform: scale(2);
-    filter: blur(4px);
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    -webkit-filter: blur(4px);
+            filter: blur(4px);
     padding: 10%;
     font-size: 1.5em;
     font-weight: 300;
@@ -114,6 +119,7 @@ a {
     border: 0;
     height: 1px;
     background: black;
+    background-image: -webkit-linear-gradient(left, #ccc, #333, #ccc);
     background-image: linear-gradient(to right, #ccc, #333, #ccc); }
   .award .date {
     font-size: 2em;
@@ -237,8 +243,10 @@ a.accordion-toggle.collapsed:after {
   position: relative; }
 
 .accordion-toggle > .panel-heading, .accordion-toggle {
-  transform-origin: left;
-  transform: rotate(90deg);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
   -ms-transition: all 0.2s ease;
@@ -246,7 +254,6 @@ a.accordion-toggle.collapsed:after {
   color: #b70000; }
 
 .accordion-toggle.collapsed > .panel-heading, .accordion-toggle.collapsed {
-  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
   color: inherit; }
-
-/*# sourceMappingURL=style.css.map */
