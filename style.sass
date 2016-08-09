@@ -240,10 +240,17 @@ a.accordion-toggle.collapsed:after
 		content: "\e250"
 		color: $black
 
+.bump
+		transform: translateX(0px)
+		transition: all .2s ease
+		&:hover
+				transform: translateX(5px)
+
 .panel-heading
 		padding: 0 15px
 		display: inline-block
 		h4
+				@extend .bump
 				margin: 5px 0
 
 .panel-body

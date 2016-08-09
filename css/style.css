@@ -233,6 +233,15 @@ a.accordion-toggle.collapsed:after {
   content: "";
   color: black; }
 
+.bump, .panel-heading h4 {
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+  -webkit-transition: all 0.2s ease;
+          transition: all 0.2s ease; }
+  .bump:hover, .panel-heading h4:hover {
+    -webkit-transform: translateX(5px);
+            transform: translateX(5px); }
+
 .panel-heading {
   padding: 0 15px;
   display: inline-block; }
