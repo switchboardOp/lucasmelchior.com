@@ -1,12 +1,15 @@
 # Main Page
-- [ ] build script
 - [ ] add resume
 - [ ] minimize layout
 - [ ] volunteer
 - [ ] sticky header
 - [ ] corner model (low poly)
-- [ ] page transitions
 - [ ] asymetric mask
+- [ ] improve build
+	- [ ] src/build
+	- [ ] scripts
+	- [ ] styles
+	- [ ] img
 
 ## Done
 - [x] splash
@@ -17,6 +20,8 @@
 - [x] education
 - [x] fix a tag in skills section
 - [x] skyline
+- [x] build script
+- [x] page transitions
 
 # Avatar
 - [x] add LM bust

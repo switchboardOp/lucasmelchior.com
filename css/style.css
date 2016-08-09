@@ -1,256 +1,258 @@
 @charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600);
 body {
-	font-family: "Open Sans", sans-serif;
-	background: white; }
+  font-family: "Open Sans", sans-serif;
+  background: white; }
 
 @-webkit-keyframes flyin {
-	to {
-		-webkit-filter: blur(0);
-						filter: blur(0);
-		-webkit-transform: scale(1);
-						transform: scale(1);
-		opacity: 1; } }
+  to {
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1; } }
 
 @keyframes flyin {
-	to {
-		-webkit-filter: blur(0);
-						filter: blur(0);
-		-webkit-transform: scale(1);
-						transform: scale(1);
-		opacity: 1; } }
+  to {
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1; } }
 * {
-	border-radius: 0 !important; }
+  border-radius: 0 !important; }
 
 .absolute-center {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	-webkit-transform: translate(-50%, -50%);
-					transform: translate(-50%, -50%); }
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
 
 .vertical-center {
-	position: absolute;
-	top: 50%;
-	-webkit-transform: translate(0, -50%);
-					transform: translate(0, -50%); }
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%); }
 
 .full-height {
-	height: 100%; }
+  height: 100%; }
 
 .inline-block {
-	display: inline-block; }
+  display: inline-block; }
 
 .flip {
-	-webkit-transform: scaleX(-1);
-					transform: scaleX(-1);
-	-webkit-filter: FlipH;
-					filter: FlipH; }
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+  -webkit-filter: FlipH;
+          filter: FlipH; }
 
 a {
-	color: black; }
-	a:hover, a:focus, a:active {
-		color: #b70000;
-		text-decoration: none; }
+  color: black; }
+  a:hover, a:focus, a:active {
+    color: #b70000;
+    text-decoration: none; }
 
 .main-color {
-	color: #b70000; }
+  color: #b70000; }
 
 .contact {
-	padding: 0; }
-	.contact > li {
-		list-style: none;
-		display: inline-block;
-		padding: 0 3px 0 5px;
-		border-left: 2px solid #b70000; }
-		@media screen and (max-width: 520px) {
-			.contact > li {
-				padding: 0 0 0 5px;
-				display: block; }
-				.contact > li.first {
-					border-left: 2px solid #b70000; } }
-	.contact .first {
-		border: 0px; }
+  padding: 0; }
+  .contact > li {
+    list-style: none;
+    display: inline-block;
+    padding: 0 3px 0 5px;
+    border-left: 2px solid #b70000; }
+    @media screen and (max-width: 520px) {
+      .contact > li {
+        padding: 0 0 0 5px;
+        display: block; }
+        .contact > li.first {
+          border-left: 2px solid #b70000; } }
+  .contact .first {
+    border: 0px; }
 
 .feature > div {
-	position: relative;
-	padding: 0; }
-	.feature > div img {
-		z-index: -1; }
-	.feature > div h3 {
-		position: absolute;
-		bottom: 0;
-		padding: 2px 0 0 25px;
-		color: white;
-		width: 100%;
-		background: rgba(0, 0, 0, 0.5); }
+  position: relative;
+  padding: 0; }
+  .feature > div img {
+    z-index: -1; }
+  .feature > div h3 {
+    position: absolute;
+    bottom: 0;
+    padding: 2px 0 0 25px;
+    color: white;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5); }
 
 #header {
-	background: white; }
-	#header > h1 {
-		font-weight: 600; }
+  background: white; }
+  #header > h1 {
+    font-weight: 600; }
 
 .hero {
-	background: black url("../img/mode-off.jpg") no-repeat fixed center;
-	color: white; }
-	.hero p {
-		-webkit-animation: flyin 2s ease forwards;
-						animation: flyin 2s ease forwards;
-		opacity: 0;
-		-webkit-transform: scale(2);
-						transform: scale(2);
-		-webkit-filter: blur(4px);
-						filter: blur(4px);
-		padding: 10%;
-		font-size: 1.5em;
-		font-weight: 300;
-		text-align: center; }
+  background: black url("../img/mode-off.jpg") no-repeat fixed center;
+  background-size: cover;
+  overflow: hidden;
+  color: white; }
+  .hero p {
+    -webkit-animation: flyin 2s ease forwards;
+            animation: flyin 2s ease forwards;
+    opacity: 0;
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    -webkit-filter: blur(4px);
+            filter: blur(4px);
+    padding: 10%;
+    font-size: 1.5em;
+    font-weight: 300;
+    text-align: center; }
 
 .award {
-	display: table-cell;
-	vertical-align: middle; }
-	.award h3 {
-		font-size: 16px; }
-	@media screen and (max-width: 570px) {
-		.award h3 {
-			font-size: 12px; } }
-	.award hr {
-		border: 0;
-		height: 1px;
-		background: black;
-		background-image: -webkit-linear-gradient(left, #ccc, #333, #ccc);
-		background-image: linear-gradient(to right, #ccc, #333, #ccc); }
-	.award .date {
-		font-size: 2em;
-		margin-top: 2px; }
-	.award .winner {
-		font-size: 1.5em;
-		margin-bottom: 10px; }
+  display: table-cell;
+  vertical-align: middle; }
+  .award h3 {
+    font-size: 16px; }
+  @media screen and (max-width: 570px) {
+    .award h3 {
+      font-size: 12px; } }
+  .award hr {
+    border: 0;
+    height: 1px;
+    background: black;
+    background-image: -webkit-linear-gradient(left, #ccc, #333, #ccc);
+    background-image: linear-gradient(to right, #ccc, #333, #ccc); }
+  .award .date {
+    font-size: 2em;
+    margin-top: 2px; }
+  .award .winner {
+    font-size: 1.5em;
+    margin-bottom: 10px; }
 
 .award-wrap {
-	display: table;
-	margin-bottom: 40px; }
+  display: table;
+  margin-bottom: 40px; }
 
 .laurel {
-	display: inline;
-	max-height: 200px;
-	vertical-align: top; }
+  display: inline;
+  max-height: 200px;
+  vertical-align: top; }
 
 blockquote {
-	display: block;
-	padding: 40px 20px 245px 70px;
-	margin: 0 0 -210px 0;
-	position: relative;
-	z-index: -1;
-	/*Font */
-	font-size: 16px;
-	text-align: justify;
-	/*Borders - (Optional) */
-	border-right: 2px solid #b70000;
-	border-left: 0; }
-	blockquote::before {
-		content: "“";
-		font-size: 90px;
-		font-weight: bold;
-		color: #999;
-		position: absolute;
-		left: 10px;
-		top: 0; }
+  display: block;
+  padding: 40px 20px 245px 70px;
+  margin: 0 0 -210px 0;
+  position: relative;
+  z-index: -1;
+  /*Font */
+  font-size: 16px;
+  text-align: justify;
+  /*Borders - (Optional) */
+  border-right: 2px solid #b70000;
+  border-left: 0; }
+  blockquote::before {
+    content: "“";
+    font-size: 90px;
+    font-weight: bold;
+    color: #999;
+    position: absolute;
+    left: 10px;
+    top: 0; }
 
 blockquote::after {
-	content: ""; }
+  content: ""; }
 
 #footer {
-	background: black;
-	min-height: 100px;
-	position: relative;
-	color: white;
-	font-weight: 300; }
-	#footer a {
-		color: white; }
-		#footer a:hover, #footer a:active {
-			color: #b70000;
-			text-decoration: none; }
-	#footer .contact {
-		float: left;
-		margin-top: 40px; }
-		@media screen and (max-width: 700px) {
-			#footer .contact {
-				margin-top: 20px;
-				margin-right: 20px; } }
-	@media screen and (max-width: 700px) {
-		#footer .contact > li {
-			padding: 0 0 0 5px;
-			display: block; }
-			#footer .contact > li.first {
-				border-left: 2px solid #b70000; } }
+  background: black;
+  min-height: 100px;
+  position: relative;
+  color: white;
+  font-weight: 300; }
+  #footer a {
+    color: white; }
+    #footer a:hover, #footer a:active {
+      color: #b70000;
+      text-decoration: none; }
+  #footer .contact {
+    float: left;
+    margin-top: 40px; }
+    @media screen and (max-width: 700px) {
+      #footer .contact {
+        margin-top: 20px;
+        margin-right: 20px; } }
+  @media screen and (max-width: 700px) {
+    #footer .contact > li {
+      padding: 0 0 0 5px;
+      display: block; }
+      #footer .contact > li.first {
+        border-left: 2px solid #b70000; } }
 
 .footer-logos {
-	min-width: 100px;
-	padding: 38px 5px 10px 20px;
-	float: right;
-	display: block; }
-	@media screen and (max-width: 400px) {
-		.footer-logos {
-			float: left;
-			padding: 0 0 10px 0; } }
+  min-width: 100px;
+  padding: 38px 5px 10px 20px;
+  float: right;
+  display: block; }
+  @media screen and (max-width: 400px) {
+    .footer-logos {
+      float: left;
+      padding: 0 0 10px 0; } }
 
 .footer-logo {
-	fill: white;
-	height: 25px;
-	width: 25px; }
+  fill: white;
+  height: 25px;
+  width: 25px; }
 
 .modal-header {
-	background: black;
-	color: white; }
-	.modal-header .close {
-		color: white;
-		opacity: 0.8; }
+  background: black;
+  color: white; }
+  .modal-header .close {
+    color: white;
+    opacity: 0.8; }
 
 .modal-body p {
-	margin: 0 30px 30px 30px;
-	font-size: 1.2em; }
+  margin: 0 30px 30px 30px;
+  font-size: 1.2em; }
 .modal-body a {
-	color: #b70000; }
+  color: #b70000; }
 .modal-body img.center-block {
-	margin-bottom: 30px; }
+  margin-bottom: 30px; }
 
 .btn-default {
-	background: #b70000;
-	color: white; }
+  background: #b70000;
+  color: white; }
 
 a.accordion-toggle:after {
-	font-family: "Glyphicons Halflings";
-	position: relative;
-	top: 5px;
-	content: "";
-	color: #b70000;
-	float: right; }
+  font-family: "Glyphicons Halflings";
+  position: relative;
+  top: 5px;
+  content: "";
+  color: #b70000;
+  float: right; }
 
 a.accordion-toggle.collapsed:after {
-	content: "";
-	color: black; }
+  content: "";
+  color: black; }
 
 .panel-heading {
-	padding: 0 15px;
-	display: inline-block; }
-	.panel-heading h4 {
-		margin: 5px 0; }
+  padding: 0 15px;
+  display: inline-block; }
+  .panel-heading h4 {
+    margin: 5px 0; }
 
 .panel-body {
-	padding: 0 35px;
-	position: relative; }
+  padding: 0 35px;
+  position: relative; }
 
 .accordion-toggle > .panel-heading, .accordion-toggle {
-	-webkit-transform-origin: left;
-					transform-origin: left;
-	-webkit-transform: rotate(90deg);
-					transform: rotate(90deg);
-	-webkit-transition: all 0.2s ease;
-					transition: all 0.2s ease;
-	color: #b70000; }
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transition: all 0.2s ease;
+          transition: all 0.2s ease;
+  color: #b70000; }
 
 .accordion-toggle.collapsed > .panel-heading, .accordion-toggle.collapsed {
-	-webkit-transform: rotate(0deg);
-					transform: rotate(0deg);
-	color: inherit; }
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  color: inherit; }
