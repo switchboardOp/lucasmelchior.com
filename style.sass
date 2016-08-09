@@ -16,8 +16,6 @@ body
 		background: $white
 
 @mixin translate($x, $y)
-		-webkit-transform: translate($x, $y)
-		-ms-transform: translate($x, $y)
 		transform: translate($x, $y)
 
 @mixin flyin($s, $t)
@@ -56,12 +54,8 @@ body
 		display: inline-block
 
 .flip
-		-moz-transform: scaleX(-1)
-		-o-transform: scaleX(-1)
-		-webkit-transform: scaleX(-1)
 		transform: scaleX(-1)
 		filter: FlipH
-		-ms-filter: "FlipH"
 
 a
 		color: $black
@@ -258,10 +252,7 @@ a.accordion-toggle.collapsed:after
 .accordion-toggle > .panel-heading, .accordion-toggle
 		transform-origin: left
 		transform: rotate(90deg)
-		-webkit-transition: all .2s ease
-		-moz-transition: all .2s ease
-		-ms-transition: all .2s ease
-		-o-transition: all .2s ease
+		transition: all .2s ease
 		color: $main-color
 
 .accordion-toggle.collapsed > .panel-heading, .accordion-toggle.collapsed

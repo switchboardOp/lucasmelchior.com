@@ -13,9 +13,9 @@ module.exports = function (grunt) {
 			}
 		},
 		autoprefixer: {
-			build: {
+			dist: {
 				expand: true,
-				src: ['**/**/*.css'],
+				src: ['**/*.css'],
 			}
 		},
 		cssmin: {
@@ -30,15 +30,32 @@ module.exports = function (grunt) {
 				}
 			}
 		},
+		imagemin: {
+			dynamic: {
+				files: [{
+					expand: true,
+					cwd: 'images/',
+					src: ['**/*.{png,jpg,gif,svg}'],
+					dest: 'img/'
+					}]
+			}
+		},
 		watch: {
-			stylesheets: {
+			styles: {
 				files: '**/*.sass',
-				tasks: ['stylesheets']
+				tasks: ['styles']
+			},
+			images: {
+				files: '**/*.{png,jpg,gif}',
+				tasks: ['images']
 			}
 		}
 	});
-	grunt.registerTask('stylesheets', 'Compiles the stylesheets.', ['sass', 'autoprefixer', 'cssmin']);
-	grunt.registerTask('default', ['watch']);
+	grunt.registerTask('styles', 'Compiles the stylesheets.', ['newer:sass', 'newer:autoprefixer', 'newer:cssmin']);
+	grunt.registerTask('images', ['newer:imagemin']);
+	grunt.registerTask('default', ['styles','images','watch']);
+	grunt.loadNpmTasks('grunt-newer');
+	grunt.loadNpmTasks('grunt-contrib-imagemin');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-autoprefixer');
 	grunt.loadNpmTasks('grunt-contrib-clean');
