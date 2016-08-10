@@ -1,5 +1,8 @@
 # Main Page
 - [ ] add resume
+- [ ] LM icon
+- [ ] drawer for webtoys
+- [ ] moduleize sass
 - [ ] minimize layout
 - [ ] volunteer
 - [ ] sticky header

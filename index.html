@@ -10,13 +10,26 @@
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/style.min.css">
 	<link rel="stylesheet" href="css/animsition.min.css">
-	<script src="js/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/animsition.min.js"></script>
-	<script src="js/fade-up.js"></script>
+	<link rel="stylesheet" href="css/bootstrap-drawer.css">
 </head>
 
-<body class="animsition">
+<body class="animsition has-drawer">
+
+	<div id="expDrawer" class="drawer drawer-inverse drawer-right dw-xs-10 dw-sm-4 dw-md-4 fold" aria-labelledby="expDrawer">
+		<div class="drawer-controls">
+			<a href="#expDrawer" data-toggle="drawer" aria-foldedopen="false" aria-controls="expDrawer"><span class="flash glyphicon glyphicon-flash" aria-hidden="true"></span></a>
+		</div>
+		<div class="drawer-contents">
+			<div class="drawer-heading">
+				<h2 class="drawer-title">experiments</h2>
+			</div>
+			<ul class="drawer-nav">
+				<li><a href="http://avatar.lucasmelchior.com">+ avatar</a></li>
+				<li><a href="http://lucasmelchior.com/asciiscr0ll">+ asciiscr0ll</a></li>
+			</ul>
+		</div>
+	</div>
+
 	<div class="container">
 		<div id="header" class="page-header">
 			<h1><span class="main-color">LUCAS</span><wbr>MELCHIOR</h1>
@@ -184,7 +197,8 @@
 		v39.309c-0.187,0.294-0.43,0.611-0.606,0.896h0.606v-0.896c12.251-18.869,34.13-45.824,83.102-45.824
 		C384.633,136.724,430.117,176.361,430.117,261.543z M52.183,9.558C20.635,9.558,0,30.251,0,57.463
 		c0,26.619,20.038,47.94,50.959,47.94h0.616c32.159,0,52.159-21.317,52.159-47.94C103.128,30.251,83.734,9.558,52.183,9.558z
-		M5.477,420.56h92.184v-277.32H5.477V420.56z" /> </svg>
+		M5.477,420.56h92.184v-277.32H5.477V420.56z" />
+							</svg>
 						</a>
 					</li>
 					<li>
@@ -199,7 +213,8 @@
 		c3.675,19.277,15.677,35.159,48.169,42.839c-14.849,0.98-22.523,4.359-29.478,11.642c6.763,13.407,23.266,29.186,52.953,25.947
 		c-33.006,14.226-13.458,40.571,13.399,36.642C113.713,320.887,41.479,317.409,0,277.828
 		c108.299,147.572,343.716,87.274,378.799-54.866c26.285,0.224,41.737-9.105,51.318-19.39
-		C414.973,206.142,393.023,203.486,381.384,198.639z" /> </svg>
+		C414.973,206.142,393.023,203.486,381.384,198.639z" />
+							</svg>
 						</a>
 					</li>
 					<li>
@@ -219,7 +234,8 @@
 		c5.545-2.014,12.384-2.736,19.715-2.973c-0.432-2.596-4.219-1.882-6.57-1.782C8.973,42.781,3.473,43.324,0,43.976
 		c5.034-1.795,12.098-1.571,18.918-1.585c-2.086-6.54-1.363-16.929,3.186-20.798C20.815,18.344,21.215,13.03,22.9,10.5
 		c5.079,0.228,8.159,2.443,11.35,4.557c3.957-1.125,8.118-1.685,13.54-1.387c2.28,0.126,4.651,1.151,6.369,0.989
-		c1.685-0.158,3.542-2.049,5.178-2.771C61.468,10.947,63.271,10.588,65.709,10.5z" /> </svg>
+		c1.685-0.158,3.542-2.049,5.178-2.771C61.468,10.947,63.271,10.588,65.709,10.5z" />
+							</svg>
 						</a>
 					</li>
 				</ul>
@@ -286,7 +302,7 @@
 				<div class="modal-body"> <img class="img-responsive center-block" src="img/ss-cover.jpg" alt="Sprocket Science Album">
 					<p><span class="lead">In the near-future a monastic motorcycle cult distills holy fuel to propel humanity into a new age.</span> Sprocket-Science is a collaboration between myself and Peter LaVoie (Fort Wilson Riot, Union Shakedown). We released a full length album in 2012.</p>
 					<p>You can listen to our self-titled album below or at <a href="https://sprocket-science.bandcamp.com/" target="_blank">sprocket-science.bandcamp.com</a></p>
-					<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=3998897459/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/artwork=small/track=3223869642/transparent=true/" seamless><a href="http://sprocket-science.bandcamp.com/album/sprocket-science" target="_blank">Sprocket Science by Sprocket-Science</a></iframe>
+					<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer.html/ref=http%253A%252F%252Flucasmelchior.com%252F/album=3998897459/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/artwork=small/track=3223869642/transparent=true/" seamless><a href="http://sprocket-science.bandcamp.com/album/sprocket-science" target="_blank">Sprocket Science by Sprocket-Science</a></iframe>
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -312,6 +328,11 @@
 			</div>
 		</div>
 	</div>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/drawer.min.js"></script>
+	<script src="js/animsition.min.js"></script>
+	<script src="js/fade-up.js"></script>
 </body>
 
 </html>
