@@ -140,7 +140,7 @@ a {
 
 blockquote {
   display: block;
-  padding: 40px 25px 245px 70px;
+  padding: 40px 25px 245px 60px;
   margin: 0 10px -210px 0;
   position: relative;
   z-index: -1;
@@ -225,6 +225,7 @@ a.accordion-toggle:after {
   font-family: "Glyphicons Halflings";
   position: relative;
   top: 5px;
+  right: 10px;
   content: "";
   color: #b70000;
   float: right; }
@@ -271,5 +272,13 @@ a.accordion-toggle.collapsed:after {
 
 #particles-js {
   position: absolute;
+  top: 0px;
   height: 100%;
   width: 100%; }
+
+.drawer-container {
+  position: relative;
+  top: 30%; }
+
+.indent20 {
+  margin-left: 20px; }

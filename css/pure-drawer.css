@@ -49,6 +49,7 @@ body {
   position: fixed;
   top: 25px;
   z-index: 99;
+  font-size: 30px;
   color: black;
   -webkit-transition: all 400ms ease-in-out;
           transition: all 400ms ease-in-out;
