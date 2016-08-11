@@ -1,5 +1,5 @@
 // Point $show-drawer to one of the variables in _pure-drawer-breakpoints.scss to control which breakpoints drawers should appear.
-// $show-drawer: $small-only; 
+// $show-drawer: $small-only;
 
 /**************
 ## Animation ##
@@ -25,18 +25,18 @@
 ## Toggler ##
 ************/
 
-// $toggler-color: lighten(#374c5d, 20%);
-// $toggler-checked-color: #1fc08e;
-// $toggler-focus-color: #1fc08e;
+$toggler-color: black;
+$toggler-checked-color: rgb(183,0,0);
+$toggler-focus-color: rgb(183,0,0);
 
 /***********
 ## Drawer ##
 ***********/
 
-// $drawer-bgcolor: #374c5d;
+$drawer-bgcolor: black;
 
 // For 'left' and 'right' positioned drawers.
-// $drawer-width-small: 100%;
+$drawer-width-small: 300px;
 // $drawer-width-medium: 300px;
 // $drawer-width-large: 300px;
 

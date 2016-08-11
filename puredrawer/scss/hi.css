@@ -1,26 +1,10 @@
 /**************
-## Animation ##
-**************/
-/************
-## Toggler ##
-************/
-/***********
-## Drawer ##
-***********/
-/***********
-## Pusher ##
-***********/
-/*******************
-## Pusher Overlay ##
-*******************/
-/**************
 ## Variables ##
 **************/
 /*************
 ## Required ##
 *************/
-html,
-body {
+html, body {
   height: 100%; }
 
 /**************
@@ -39,20 +23,22 @@ body {
   position: absolute;
   top: -9999px; }
   .pure-toggle:focus ~ .pure-toggle-label {
-    border-color: #b70000;
-    color: #b70000; }
+    border-color: #1fc08e;
+    color: #1fc08e; }
 
 .pure-toggle-label {
   display: none;
   cursor: pointer;
   display: block;
   position: fixed;
-  top: 25px;
+  top: 15px;
   z-index: 99;
-  color: black;
+  color: #5d809d;
+  width: 70px;
+  height: 70px;
   -webkit-transition: all 400ms ease-in-out;
           transition: all 400ms ease-in-out;
-  border: none;
+  border: 2px solid #5d809d;
   border-radius: 50%;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -61,12 +47,12 @@ body {
   user-select: none;
   -webkit-tap-highlight-color: transparent; }
   .pure-toggle-label:hover {
-    border-color: #b70000;
-    color: #b70000; }
+    border-color: #1fc08e;
+    color: #1fc08e; }
     .pure-toggle-label:hover .pure-toggle-icon,
     .pure-toggle-label:hover .pure-toggle-icon:before,
     .pure-toggle-label:hover .pure-toggle-icon:after {
-      background-color: #b70000; }
+      background-color: #1fc08e; }
   .pure-toggle-label:active {
     -webkit-tap-highlight-color: transparent; }
   .pure-toggle-label .pure-toggle-icon,
@@ -78,7 +64,7 @@ body {
     height: 4px;
     width: 35px;
     cursor: pointer;
-    background: black;
+    background: #5d809d;
     display: block;
     content: '';
     -webkit-transition: all 500ms ease-in-out;
@@ -98,7 +84,7 @@ body {
   right: auto; }
 
 .pure-toggle-label[data-toggle-label='right'] {
-  right: 11px;
+  right: 56/2px;
   left: auto; }
 
 .pure-toggle-label[data-toggle-label='top'] {
@@ -115,16 +101,13 @@ body {
 .pure-toggle[data-toggle='left']:checked ~ .pure-toggle-label[data-toggle-label='left'],
 .pure-toggle[data-toggle='right']:checked ~ .pure-toggle-label[data-toggle-label='right'],
 .pure-toggle[data-toggle='top']:checked ~ .pure-toggle-label[data-toggle-label='top'] {
-  color: #b70000;
-  -webkit-transform: rotate(-270deg);
-          transform: rotate(-270deg);
-  right: 25px; }
+  border-color: #1fc08e;
+  color: #1fc08e; }
   .pure-toggle[data-toggle='left']:checked ~ .pure-toggle-label[data-toggle-label='left'] .pure-toggle-icon,
   .pure-toggle[data-toggle='right']:checked ~ .pure-toggle-label[data-toggle-label='right'] .pure-toggle-icon,
   .pure-toggle[data-toggle='top']:checked ~ .pure-toggle-label[data-toggle-label='top'] .pure-toggle-icon {
     background-color: transparent; }
-  .pure-toggle[data-toggle='left']:checked ~ .pure-toggle-label[data-toggle-label='left'] .pure-toggle-icon:before,
-  .pure-toggle[data-toggle='left']:checked ~ .pure-toggle-label[data-toggle-label='left'] .pure-toggle-icon:after,
+  .pure-toggle[data-toggle='left']:checked ~ .pure-toggle-label[data-toggle-label='left'] .pure-toggle-icon:before, .pure-toggle[data-toggle='left']:checked ~ .pure-toggle-label[data-toggle-label='left'] .pure-toggle-icon:after,
   .pure-toggle[data-toggle='right']:checked ~ .pure-toggle-label[data-toggle-label='right'] .pure-toggle-icon:before,
   .pure-toggle[data-toggle='right']:checked ~ .pure-toggle-label[data-toggle-label='right'] .pure-toggle-icon:after,
   .pure-toggle[data-toggle='top']:checked ~ .pure-toggle-label[data-toggle-label='top'] .pure-toggle-icon:before,
@@ -152,27 +135,20 @@ body {
   z-index: 1;
   height: 100%;
   visibility: hidden;
-  background-color: black;
-  border-left: 2px solid #b70000;
+  background-color: #374c5d;
   -webkit-transition-property: all;
           transition-property: all;
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms;
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
   -webkit-transition-timing-function: ease-out;
           transition-timing-function: ease-out;
-  width: 300px;
-  color: white; }
+  width: 100%; }
   @media only screen and (min-width: 40.063em) {
     .pure-drawer {
       width: 300px; } }
   @media only screen and (min-width: 64.063em) {
     .pure-drawer {
       width: 300px; } }
-  .pure-drawer a {
-    color: white; }
-    .pure-drawer a:hover, .pure-drawer a:active {
-      color: #b70000;
-      text-decoration: none; }
 
 .pure-drawer[data-position='right'] {
   left: auto;
@@ -208,8 +184,8 @@ body {
   background-color: #fff;
   -webkit-transition-property: -webkit-transform;
           transition-property: transform;
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms;
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
   -webkit-transition-timing-function: ease-out;
           transition-timing-function: ease-out; }
 
@@ -227,15 +203,15 @@ body {
   background-color: rgba(0, 0, 0, 0.4);
   -webkit-transition-property: opacity;
           transition-property: opacity;
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms;
-  -webkit-transition-delay: 300ms;
-          transition-delay: 300ms;
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
+  -webkit-transition-delay: 500ms;
+          transition-delay: 500ms;
   -webkit-transition-timing-function: ease-in-out;
           transition-timing-function: ease-in-out; }
 
 .pure-toggle[data-toggle='left']:checked ~ .pure-overlay[data-overlay='left'] {
-  left: 300px; }
+  left: 100%; }
   @media only screen and (min-width: 40.063em) {
     .pure-toggle[data-toggle='left']:checked ~ .pure-overlay[data-overlay='left'] {
       left: 300px; } }
@@ -244,7 +220,7 @@ body {
       left: 300px; } }
 
 .pure-toggle[data-toggle='right']:checked ~ .pure-overlay[data-overlay='right'] {
-  right: 300px; }
+  right: 100%; }
   @media only screen and (min-width: 40.063em) {
     .pure-toggle[data-toggle='right']:checked ~ .pure-overlay[data-overlay='right'] {
       right: 300px; } }
@@ -273,7 +249,7 @@ body {
 ## Fallback for older browsers ##
 ********************************/
 .no-csstransforms3d .pure-toggle[data-toggle='left']:checked ~ .pure-pusher-container .pure-pusher {
-  left: 300px; }
+  left: 100%; }
   @media only screen and (min-width: 40.063em) {
     .no-csstransforms3d .pure-toggle[data-toggle='left']:checked ~ .pure-pusher-container .pure-pusher {
       left: 300px; } }
@@ -281,7 +257,7 @@ body {
     .no-csstransforms3d .pure-toggle[data-toggle='left']:checked ~ .pure-pusher-container .pure-pusher {
       left: 300px; } }
 .no-csstransforms3d .pure-toggle[data-toggle='right']:checked ~ .pure-pusher-container .pure-pusher {
-  left: -300px; }
+  left: -100%; }
   @media only screen and (min-width: 40.063em) {
     .no-csstransforms3d .pure-toggle[data-toggle='right']:checked ~ .pure-pusher-container .pure-pusher {
       left: -300px; } }
@@ -297,14 +273,23 @@ body {
     .no-csstransforms3d .pure-toggle[data-toggle='top']:checked ~ .pure-pusher-container .pure-pusher {
       top: 100px; } }
 
+/***********
+## Drawer ##
+***********/
+/***********
+## Pusher ##
+***********/
+/*******************
+## Pusher Overlay ##
+*******************/
 /*****************************
 ## Effect - Slide in on top ##
 *****************************/
 /* DRAWER */
 [data-effect='pure-effect-slide'] .pure-drawer {
   z-index: 3;
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms; }
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms; }
 
 [data-effect='pure-effect-slide'] .pure-drawer[data-position='left'] {
   -webkit-transform: translate3d(-100%, 0, 0);
@@ -327,10 +312,10 @@ body {
 
 /* OVERLAY */
 [data-effect='pure-effect-slide'] .pure-overlay {
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms;
-  -webkit-transition-delay: 150ms;
-          transition-delay: 150ms; }
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
+  -webkit-transition-delay: 250ms;
+          transition-delay: 250ms; }
 
 /********************
 ## Effect - Reveal ##
@@ -338,17 +323,17 @@ body {
 /* DRAWER */
 [data-effect='pure-effect-reveal'] .pure-drawer {
   visibility: visible;
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms; }
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms; }
 
 /* PUSHER */
 [data-effect='pure-effect-reveal'] .pure-pusher-container .pure-pusher {
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms; }
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms; }
 
 [data-effect='pure-effect-reveal'] .pure-toggle[data-toggle='left']:checked ~ .pure-pusher-container .pure-pusher {
-  -webkit-transform: translate3d(300px, 0, 0);
-  transform: translate3d(300px, 0, 0); }
+  -webkit-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0); }
   @media only screen and (min-width: 40.063em) {
     [data-effect='pure-effect-reveal'] .pure-toggle[data-toggle='left']:checked ~ .pure-pusher-container .pure-pusher {
       -webkit-transform: translate3d(300px, 0, 0);
@@ -359,8 +344,8 @@ body {
       transform: translate3d(300px, 0, 0); } }
 
 [data-effect='pure-effect-reveal'] .pure-toggle[data-toggle='right']:checked ~ .pure-pusher-container .pure-pusher {
-  -webkit-transform: translate3d(-300px, 0, 0);
-  transform: translate3d(-300px, 0, 0); }
+  -webkit-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0); }
   @media only screen and (min-width: 40.063em) {
     [data-effect='pure-effect-reveal'] .pure-toggle[data-toggle='right']:checked ~ .pure-pusher-container .pure-pusher {
       -webkit-transform: translate3d(-300px, 0, 0);
@@ -384,18 +369,18 @@ body {
 
 /* OVERLAY */
 [data-effect='pure-effect-reveal'] .pure-overlay {
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms;
-  -webkit-transition-delay: 150ms;
-          transition-delay: 150ms; }
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
+  -webkit-transition-delay: 250ms;
+          transition-delay: 250ms; }
 
 /*************************
 ## Effect - Slide along ##
 *************************/
 /* DRAWER */
 [data-effect='pure-effect-slideAlong'] .pure-drawer {
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms; }
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms; }
 
 [data-effect='pure-effect-slideAlong'] .pure-drawer[data-position='left'] {
   -webkit-transform: translate3d(-50%, 0, 0);
@@ -418,12 +403,12 @@ body {
 
 /* PUSHER */
 [data-effect='pure-effect-slideAlong'] .pure-pusher-container .pure-pusher {
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms; }
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms; }
 
 [data-effect='pure-effect-slideAlong'] .pure-toggle[data-toggle='left']:checked ~ .pure-pusher-container .pure-pusher {
-  -webkit-transform: translate3d(300px, 0, 0);
-  transform: translate3d(300px, 0, 0); }
+  -webkit-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0); }
   @media only screen and (min-width: 40.063em) {
     [data-effect='pure-effect-slideAlong'] .pure-toggle[data-toggle='left']:checked ~ .pure-pusher-container .pure-pusher {
       -webkit-transform: translate3d(300px, 0, 0);
@@ -434,8 +419,8 @@ body {
       transform: translate3d(300px, 0, 0); } }
 
 [data-effect='pure-effect-slideAlong'] .pure-toggle[data-toggle='right']:checked ~ .pure-pusher-container .pure-pusher {
-  -webkit-transform: translate3d(-300px, 0, 0);
-  transform: translate3d(-300px, 0, 0); }
+  -webkit-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0); }
   @media only screen and (min-width: 40.063em) {
     [data-effect='pure-effect-slideAlong'] .pure-toggle[data-toggle='right']:checked ~ .pure-pusher-container .pure-pusher {
       -webkit-transform: translate3d(-300px, 0, 0);
@@ -459,18 +444,18 @@ body {
 
 /* OVERLAY */
 [data-effect='pure-effect-slideAlong'] .pure-overlay {
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms;
-  -webkit-transition-delay: 150ms;
-          transition-delay: 150ms; }
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
+  -webkit-transition-delay: 250ms;
+          transition-delay: 250ms; }
 
 /*******************************
 ## Effect - Reverse slide out ##
 *******************************/
 /* DRAWER */
 [data-effect='pure-effect-reverseSlide'] .pure-drawer {
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms; }
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms; }
 
 [data-effect='pure-effect-reverseSlide'] .pure-drawer[data-position='left'] {
   -webkit-transform: translate3d(50%, 0, 0);
@@ -493,12 +478,12 @@ body {
 
 /* PUSHER */
 [data-effect='pure-effect-reverseSlide'] .pure-pusher-container .pure-pusher {
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms; }
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms; }
 
 [data-effect='pure-effect-reverseSlide'] .pure-toggle[data-toggle='left']:checked ~ .pure-pusher-container .pure-pusher {
-  -webkit-transform: translate3d(300px, 0, 0);
-  transform: translate3d(300px, 0, 0); }
+  -webkit-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0); }
   @media only screen and (min-width: 40.063em) {
     [data-effect='pure-effect-reverseSlide'] .pure-toggle[data-toggle='left']:checked ~ .pure-pusher-container .pure-pusher {
       -webkit-transform: translate3d(300px, 0, 0);
@@ -509,8 +494,8 @@ body {
       transform: translate3d(300px, 0, 0); } }
 
 [data-effect='pure-effect-reverseSlide'] .pure-toggle[data-toggle='right']:checked ~ .pure-pusher-container .pure-pusher {
-  -webkit-transform: translate3d(-300px, 0, 0);
-  transform: translate3d(-300px, 0, 0); }
+  -webkit-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0); }
   @media only screen and (min-width: 40.063em) {
     [data-effect='pure-effect-reverseSlide'] .pure-toggle[data-toggle='right']:checked ~ .pure-pusher-container .pure-pusher {
       -webkit-transform: translate3d(-300px, 0, 0);
@@ -534,16 +519,16 @@ body {
 
 /* OVERLAY */
 [data-effect='pure-effect-reverseSlide'] .pure-overlay {
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms; }
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms; }
 
 /*********************************
 ## Effect 5 - Scale Down Pusher ##
 *********************************/
 /* DRAWER */
 [data-effect='pure-effect-scaleDown'] .pure-drawer {
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms; }
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms; }
 
 [data-effect='pure-effect-scaleDown'] .pure-drawer[data-position='left'] {
   -webkit-transform: translate3d(-100%, 0, 0);
@@ -573,8 +558,8 @@ body {
 /* Needed for Firefox */
 [data-effect='pure-effect-scaleDown'] .pure-pusher-container .pure-pusher {
   z-index: 1;
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms; }
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms; }
 
 [data-effect='pure-effect-scaleDown'] .pure-toggle:checked ~ .pure-pusher-container .pure-pusher {
   -webkit-transform: translate3d(0, 0, -300px);
@@ -590,10 +575,10 @@ body {
 
 /* OVERLAY */
 [data-effect='pure-effect-scaleDown'] .pure-overlay {
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms;
-  -webkit-transition-delay: 150ms;
-          transition-delay: 150ms; }
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
+  -webkit-transition-delay: 250ms;
+          transition-delay: 250ms; }
 
 /*************************
 ## Effect - Scale Up ##
@@ -617,12 +602,12 @@ body {
 
 /* DRAWER */
 [data-effect='pure-effect-scaleUp'] .pure-drawer {
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms; }
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms; }
 
 [data-effect='pure-effect-scaleUp'] .pure-drawer[data-position='left'] {
-  -webkit-transform: translate3d(0, 0, -300px);
-  transform: translate3d(0, 0, -300px); }
+  -webkit-transform: translate3d(0, 0, -100%);
+  transform: translate3d(0, 0, -100%); }
   @media only screen and (min-width: 40.063em) {
     [data-effect='pure-effect-scaleUp'] .pure-drawer[data-position='left'] {
       -webkit-transform: translate3d(0, 0, -300px);
@@ -633,8 +618,8 @@ body {
       transform: translate3d(0, 0, -300px); } }
 
 [data-effect='pure-effect-scaleUp'] .pure-drawer[data-position='right'] {
-  -webkit-transform: translate3d(300px, 0, -300px);
-  transform: translate3d(300px, 0, -300px); }
+  -webkit-transform: translate3d(100%, 0, -100%);
+  transform: translate3d(100%, 0, -100%); }
   @media only screen and (min-width: 40.063em) {
     [data-effect='pure-effect-scaleUp'] .pure-drawer[data-position='right'] {
       -webkit-transform: translate3d(300px, 0, -300px);
@@ -665,12 +650,12 @@ body {
 
 /* PUSHER */
 [data-effect='pure-effect-scaleUp'] .pure-pusher-container .pure-pusher {
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms; }
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms; }
 
 [data-effect='pure-effect-scaleUp'] .pure-toggle[data-toggle='left']:checked ~ .pure-pusher-container .pure-pusher {
-  -webkit-transform: translate3d(300px, 0, 0);
-  transform: translate3d(300px, 0, 0); }
+  -webkit-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0); }
   @media only screen and (min-width: 40.063em) {
     [data-effect='pure-effect-scaleUp'] .pure-toggle[data-toggle='left']:checked ~ .pure-pusher-container .pure-pusher {
       -webkit-transform: translate3d(300px, 0, 0);
@@ -681,8 +666,8 @@ body {
       transform: translate3d(300px, 0, 0); } }
 
 [data-effect='pure-effect-scaleUp'] .pure-toggle[data-toggle='right']:checked ~ .pure-pusher-container .pure-pusher {
-  -webkit-transform: translate3d(-300px, 0, 0);
-  transform: translate3d(-300px, 0, 0); }
+  -webkit-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0); }
   @media only screen and (min-width: 40.063em) {
     [data-effect='pure-effect-scaleUp'] .pure-toggle[data-toggle='right']:checked ~ .pure-pusher-container .pure-pusher {
       -webkit-transform: translate3d(-300px, 0, 0);
@@ -706,18 +691,18 @@ body {
 
 /* OVERLAY */
 [data-effect='pure-effect-scaleUp'] .pure-overlay {
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms;
-  -webkit-transition-delay: 150ms;
-          transition-delay: 150ms; }
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
+  -webkit-transition-delay: 250ms;
+          transition-delay: 250ms; }
 
 /****************************************
 ## Effect - Scale and Rotate Pusher ##
 ****************************************/
 /* DRAWER */
 [data-effect='pure-effect-scaleRotate'] .pure-drawer {
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms; }
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms; }
 
 [data-effect='pure-effect-scaleRotate'] .pure-drawer[data-position='left'] {
   -webkit-transform: translate3d(-100%, 0, 0);
@@ -745,8 +730,8 @@ body {
 
 /* PUSHER */
 [data-effect='pure-effect-scaleRotate'] .pure-pusher-container .pure-pusher {
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms; }
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms; }
 
 [data-effect='pure-effect-scaleRotate'] .pure-toggle[data-toggle='left']:checked ~ .pure-pusher-container .pure-pusher {
   -webkit-transform: translate3d(100px, 0, -600px) rotateY(-20deg);
@@ -762,18 +747,18 @@ body {
 
 /* OVERLAY */
 [data-effect='pure-effect-scaleRotate'] .pure-overlay {
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms;
-  -webkit-transition-delay: 150ms;
-          transition-delay: 150ms; }
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
+  -webkit-transition-delay: 250ms;
+          transition-delay: 250ms; }
 
 /**************************
 ## Effect - Fall in ##
 **************************/
 /* DRAWER */
 [data-effect='pure-effect-fall'] .pure-drawer {
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms; }
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms; }
 
 [data-effect='pure-effect-fall'] .pure-drawer[data-position='left'],
 [data-effect='pure-effect-fall'] .pure-drawer[data-position='right'] {
@@ -797,12 +782,12 @@ body {
 
 /* PUSHER */
 [data-effect='pure-effect-fall'] .pure-pusher-container .pure-pusher {
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms; }
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms; }
 
 [data-effect='pure-effect-fall'] .pure-toggle[data-toggle='left']:checked ~ .pure-pusher-container .pure-pusher {
-  -webkit-transform: translate3d(300px, 0, 0);
-  transform: translate3d(300px, 0, 0); }
+  -webkit-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0); }
   @media only screen and (min-width: 40.063em) {
     [data-effect='pure-effect-fall'] .pure-toggle[data-toggle='left']:checked ~ .pure-pusher-container .pure-pusher {
       -webkit-transform: translate3d(300px, 0, 0);
@@ -813,8 +798,8 @@ body {
       transform: translate3d(300px, 0, 0); } }
 
 [data-effect='pure-effect-fall'] .pure-toggle[data-toggle='right']:checked ~ .pure-pusher-container .pure-pusher {
-  -webkit-transform: translate3d(-300px, 0, 0);
-  transform: translate3d(-300px, 0, 0); }
+  -webkit-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0); }
   @media only screen and (min-width: 40.063em) {
     [data-effect='pure-effect-fall'] .pure-toggle[data-toggle='right']:checked ~ .pure-pusher-container .pure-pusher {
       -webkit-transform: translate3d(-300px, 0, 0);
@@ -838,18 +823,18 @@ body {
 
 /* OVERLAY */
 [data-effect='pure-effect-fall'] .pure-overlay {
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms;
-  -webkit-transition-delay: 150ms;
-          transition-delay: 150ms; }
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
+  -webkit-transition-delay: 250ms;
+          transition-delay: 250ms; }
 
 /*********************
 ## Effect - Push ##
 *********************/
 /* DRAWER */
 [data-effect='pure-effect-push'] .pure-drawer {
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms; }
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms; }
 
 [data-effect='pure-effect-push'] .pure-drawer[data-position='left'] {
   -webkit-transform: translate3d(-100%, 0, 0);
@@ -872,12 +857,12 @@ body {
 
 /* PUSHER */
 [data-effect='pure-effect-push'] .pure-pusher-container .pure-pusher {
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms; }
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms; }
 
 [data-effect='pure-effect-push'] .pure-toggle[data-toggle='left']:checked ~ .pure-pusher-container .pure-pusher {
-  -webkit-transform: translate3d(300px, 0, 0);
-  transform: translate3d(300px, 0, 0); }
+  -webkit-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0); }
   @media only screen and (min-width: 40.063em) {
     [data-effect='pure-effect-push'] .pure-toggle[data-toggle='left']:checked ~ .pure-pusher-container .pure-pusher {
       -webkit-transform: translate3d(300px, 0, 0);
@@ -888,8 +873,8 @@ body {
       transform: translate3d(300px, 0, 0); } }
 
 [data-effect='pure-effect-push'] .pure-toggle[data-toggle='right']:checked ~ .pure-pusher-container .pure-pusher {
-  -webkit-transform: translate3d(-300px, 0, 0);
-  transform: translate3d(-300px, 0, 0); }
+  -webkit-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0); }
   @media only screen and (min-width: 40.063em) {
     [data-effect='pure-effect-push'] .pure-toggle[data-toggle='right']:checked ~ .pure-pusher-container .pure-pusher {
       -webkit-transform: translate3d(-300px, 0, 0);
@@ -913,10 +898,10 @@ body {
 
 /* OVERLAY */
 [data-effect='pure-effect-push'] .pure-overlay {
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms;
-  -webkit-transition-delay: 150ms;
-          transition-delay: 150ms; }
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
+  -webkit-transition-delay: 250ms;
+          transition-delay: 250ms; }
 
 /********************
 ## Effect - Bounce ##

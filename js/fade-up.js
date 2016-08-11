@@ -4,8 +4,8 @@ $(document).ready(function () {
 		outClass: 'fade-out-up',
 		inDuration: 500,
 		outDuration: 300,
-		linkElement: '.animsition-link',
-		// e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
+		//linkElement: '.animsition-link',
+		linkElement: 'a:not([target="_blank"]):not([href^="#"])',
 		loading: true,
 		loadingParentElement: 'body', //animsition wrapper element
 		loadingClass: 'animsition-loading',
