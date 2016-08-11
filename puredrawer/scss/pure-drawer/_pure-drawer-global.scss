@@ -76,7 +76,7 @@ body {
 	z-index: 99;
 	font-size: 30px;
 	color: $toggler-color;
-	transition: all 400ms ease-in-out;
+	transition: all 300ms ease-in-out;
 	border: none;
 	border-radius: 50%;
 	-webkit-user-select: none;
@@ -144,7 +144,9 @@ body {
 }
 
 .pure-toggle-label[data-toggle-label='right'] {
-	right: 11px;
+	//right: 11px;
+	//animation-delay: 300ms;
+	right: 28px;
 	left: auto;
 }
 
@@ -166,7 +168,8 @@ body {
 .pure-toggle[data-toggle='top']:checked ~ .pure-toggle-label[data-toggle-label='top'] {
 	color: $toggler-checked-color;
 	transform: rotate(-270deg);
-	right: 25px;
+	//top: 33%;
+	//right: 25px;
 	.pure-toggle-icon {
 		background-color: transparent;
 	}

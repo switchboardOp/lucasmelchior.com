@@ -51,8 +51,7 @@ body {
   z-index: 99;
   font-size: 30px;
   color: black;
-  -webkit-transition: all 400ms ease-in-out;
-          transition: all 400ms ease-in-out;
+  transition: all 300ms ease-in-out;
   border: none;
   border-radius: 50%;
   -webkit-user-select: none;
@@ -82,8 +81,7 @@ body {
     background: black;
     display: block;
     content: '';
-    -webkit-transition: all 500ms ease-in-out;
-            transition: all 500ms ease-in-out; }
+    transition: all 500ms ease-in-out; }
   .pure-toggle-label .pure-toggle-icon {
     transform: translate3d(-50%, -4px, 0);
     -webkit-transform: translate3d(-50%, -4px, 0); }
@@ -99,7 +97,7 @@ body {
   right: auto; }
 
 .pure-toggle-label[data-toggle-label='right'] {
-  right: 11px;
+  right: 28px;
   left: auto; }
 
 .pure-toggle-label[data-toggle-label='top'] {
@@ -117,9 +115,7 @@ body {
 .pure-toggle[data-toggle='right']:checked ~ .pure-toggle-label[data-toggle-label='right'],
 .pure-toggle[data-toggle='top']:checked ~ .pure-toggle-label[data-toggle-label='top'] {
   color: #b70000;
-  -webkit-transform: rotate(-270deg);
-          transform: rotate(-270deg);
-  right: 25px; }
+  transform: rotate(-270deg); }
   .pure-toggle[data-toggle='left']:checked ~ .pure-toggle-label[data-toggle-label='left'] .pure-toggle-icon,
   .pure-toggle[data-toggle='right']:checked ~ .pure-toggle-label[data-toggle-label='right'] .pure-toggle-icon,
   .pure-toggle[data-toggle='top']:checked ~ .pure-toggle-label[data-toggle-label='top'] .pure-toggle-icon {
@@ -155,12 +151,9 @@ body {
   visibility: hidden;
   background-color: black;
   border-left: 2px solid #b70000;
-  -webkit-transition-property: all;
-          transition-property: all;
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms;
-  -webkit-transition-timing-function: ease-out;
-          transition-timing-function: ease-out;
+  transition-property: all;
+  transition-duration: 300ms;
+  transition-timing-function: ease-out;
   width: 300px;
   color: white; }
   @media only screen and (min-width: 40.063em) {
@@ -207,12 +200,9 @@ body {
   left: 0;
   z-index: 2;
   background-color: #fff;
-  -webkit-transition-property: -webkit-transform;
-          transition-property: transform;
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms;
-  -webkit-transition-timing-function: ease-out;
-          transition-timing-function: ease-out; }
+  transition-property: transform;
+  transition-duration: 300ms;
+  transition-timing-function: ease-out; }
 
 /*******************
 ## Pusher Overlay ##
@@ -226,14 +216,10 @@ body {
   height: 0;
   opacity: 0;
   background-color: rgba(0, 0, 0, 0.4);
-  -webkit-transition-property: opacity;
-          transition-property: opacity;
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms;
-  -webkit-transition-delay: 300ms;
-          transition-delay: 300ms;
-  -webkit-transition-timing-function: ease-in-out;
-          transition-timing-function: ease-in-out; }
+  transition-property: opacity;
+  transition-duration: 300ms;
+  transition-delay: 300ms;
+  transition-timing-function: ease-in-out; }
 
 .pure-toggle[data-toggle='left']:checked ~ .pure-overlay[data-overlay='left'] {
   left: 300px; }
@@ -304,8 +290,7 @@ body {
 /* DRAWER */
 [data-effect='pure-effect-slide'] .pure-drawer {
   z-index: 3;
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms; }
+  transition-duration: 300ms; }
 
 [data-effect='pure-effect-slide'] .pure-drawer[data-position='left'] {
   -webkit-transform: translate3d(-100%, 0, 0);
@@ -328,10 +313,8 @@ body {
 
 /* OVERLAY */
 [data-effect='pure-effect-slide'] .pure-overlay {
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms;
-  -webkit-transition-delay: 150ms;
-          transition-delay: 150ms; }
+  transition-duration: 300ms;
+  transition-delay: 150ms; }
 
 /********************
 ## Effect - Reveal ##
@@ -339,13 +322,11 @@ body {
 /* DRAWER */
 [data-effect='pure-effect-reveal'] .pure-drawer {
   visibility: visible;
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms; }
+  transition-duration: 300ms; }
 
 /* PUSHER */
 [data-effect='pure-effect-reveal'] .pure-pusher-container .pure-pusher {
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms; }
+  transition-duration: 300ms; }
 
 [data-effect='pure-effect-reveal'] .pure-toggle[data-toggle='left']:checked ~ .pure-pusher-container .pure-pusher {
   -webkit-transform: translate3d(300px, 0, 0);
@@ -385,18 +366,15 @@ body {
 
 /* OVERLAY */
 [data-effect='pure-effect-reveal'] .pure-overlay {
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms;
-  -webkit-transition-delay: 150ms;
-          transition-delay: 150ms; }
+  transition-duration: 300ms;
+  transition-delay: 150ms; }
 
 /*************************
 ## Effect - Slide along ##
 *************************/
 /* DRAWER */
 [data-effect='pure-effect-slideAlong'] .pure-drawer {
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms; }
+  transition-duration: 300ms; }
 
 [data-effect='pure-effect-slideAlong'] .pure-drawer[data-position='left'] {
   -webkit-transform: translate3d(-50%, 0, 0);
@@ -419,8 +397,7 @@ body {
 
 /* PUSHER */
 [data-effect='pure-effect-slideAlong'] .pure-pusher-container .pure-pusher {
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms; }
+  transition-duration: 300ms; }
 
 [data-effect='pure-effect-slideAlong'] .pure-toggle[data-toggle='left']:checked ~ .pure-pusher-container .pure-pusher {
   -webkit-transform: translate3d(300px, 0, 0);
@@ -460,18 +437,15 @@ body {
 
 /* OVERLAY */
 [data-effect='pure-effect-slideAlong'] .pure-overlay {
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms;
-  -webkit-transition-delay: 150ms;
-          transition-delay: 150ms; }
+  transition-duration: 300ms;
+  transition-delay: 150ms; }
 
 /*******************************
 ## Effect - Reverse slide out ##
 *******************************/
 /* DRAWER */
 [data-effect='pure-effect-reverseSlide'] .pure-drawer {
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms; }
+  transition-duration: 300ms; }
 
 [data-effect='pure-effect-reverseSlide'] .pure-drawer[data-position='left'] {
   -webkit-transform: translate3d(50%, 0, 0);
@@ -494,8 +468,7 @@ body {
 
 /* PUSHER */
 [data-effect='pure-effect-reverseSlide'] .pure-pusher-container .pure-pusher {
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms; }
+  transition-duration: 300ms; }
 
 [data-effect='pure-effect-reverseSlide'] .pure-toggle[data-toggle='left']:checked ~ .pure-pusher-container .pure-pusher {
   -webkit-transform: translate3d(300px, 0, 0);
@@ -535,16 +508,14 @@ body {
 
 /* OVERLAY */
 [data-effect='pure-effect-reverseSlide'] .pure-overlay {
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms; }
+  transition-duration: 300ms; }
 
 /*********************************
 ## Effect 5 - Scale Down Pusher ##
 *********************************/
 /* DRAWER */
 [data-effect='pure-effect-scaleDown'] .pure-drawer {
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms; }
+  transition-duration: 300ms; }
 
 [data-effect='pure-effect-scaleDown'] .pure-drawer[data-position='left'] {
   -webkit-transform: translate3d(-100%, 0, 0);
@@ -574,8 +545,7 @@ body {
 /* Needed for Firefox */
 [data-effect='pure-effect-scaleDown'] .pure-pusher-container .pure-pusher {
   z-index: 1;
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms; }
+  transition-duration: 300ms; }
 
 [data-effect='pure-effect-scaleDown'] .pure-toggle:checked ~ .pure-pusher-container .pure-pusher {
   -webkit-transform: translate3d(0, 0, -300px);
@@ -591,10 +561,8 @@ body {
 
 /* OVERLAY */
 [data-effect='pure-effect-scaleDown'] .pure-overlay {
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms;
-  -webkit-transition-delay: 150ms;
-          transition-delay: 150ms; }
+  transition-duration: 300ms;
+  transition-delay: 150ms; }
 
 /*************************
 ## Effect - Scale Up ##
@@ -618,8 +586,7 @@ body {
 
 /* DRAWER */
 [data-effect='pure-effect-scaleUp'] .pure-drawer {
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms; }
+  transition-duration: 300ms; }
 
 [data-effect='pure-effect-scaleUp'] .pure-drawer[data-position='left'] {
   -webkit-transform: translate3d(0, 0, -300px);
@@ -666,8 +633,7 @@ body {
 
 /* PUSHER */
 [data-effect='pure-effect-scaleUp'] .pure-pusher-container .pure-pusher {
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms; }
+  transition-duration: 300ms; }
 
 [data-effect='pure-effect-scaleUp'] .pure-toggle[data-toggle='left']:checked ~ .pure-pusher-container .pure-pusher {
   -webkit-transform: translate3d(300px, 0, 0);
@@ -707,18 +673,15 @@ body {
 
 /* OVERLAY */
 [data-effect='pure-effect-scaleUp'] .pure-overlay {
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms;
-  -webkit-transition-delay: 150ms;
-          transition-delay: 150ms; }
+  transition-duration: 300ms;
+  transition-delay: 150ms; }
 
 /****************************************
 ## Effect - Scale and Rotate Pusher ##
 ****************************************/
 /* DRAWER */
 [data-effect='pure-effect-scaleRotate'] .pure-drawer {
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms; }
+  transition-duration: 300ms; }
 
 [data-effect='pure-effect-scaleRotate'] .pure-drawer[data-position='left'] {
   -webkit-transform: translate3d(-100%, 0, 0);
@@ -746,8 +709,7 @@ body {
 
 /* PUSHER */
 [data-effect='pure-effect-scaleRotate'] .pure-pusher-container .pure-pusher {
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms; }
+  transition-duration: 300ms; }
 
 [data-effect='pure-effect-scaleRotate'] .pure-toggle[data-toggle='left']:checked ~ .pure-pusher-container .pure-pusher {
   -webkit-transform: translate3d(100px, 0, -600px) rotateY(-20deg);
@@ -763,18 +725,15 @@ body {
 
 /* OVERLAY */
 [data-effect='pure-effect-scaleRotate'] .pure-overlay {
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms;
-  -webkit-transition-delay: 150ms;
-          transition-delay: 150ms; }
+  transition-duration: 300ms;
+  transition-delay: 150ms; }
 
 /**************************
 ## Effect - Fall in ##
 **************************/
 /* DRAWER */
 [data-effect='pure-effect-fall'] .pure-drawer {
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms; }
+  transition-duration: 300ms; }
 
 [data-effect='pure-effect-fall'] .pure-drawer[data-position='left'],
 [data-effect='pure-effect-fall'] .pure-drawer[data-position='right'] {
@@ -798,8 +757,7 @@ body {
 
 /* PUSHER */
 [data-effect='pure-effect-fall'] .pure-pusher-container .pure-pusher {
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms; }
+  transition-duration: 300ms; }
 
 [data-effect='pure-effect-fall'] .pure-toggle[data-toggle='left']:checked ~ .pure-pusher-container .pure-pusher {
   -webkit-transform: translate3d(300px, 0, 0);
@@ -839,18 +797,15 @@ body {
 
 /* OVERLAY */
 [data-effect='pure-effect-fall'] .pure-overlay {
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms;
-  -webkit-transition-delay: 150ms;
-          transition-delay: 150ms; }
+  transition-duration: 300ms;
+  transition-delay: 150ms; }
 
 /*********************
 ## Effect - Push ##
 *********************/
 /* DRAWER */
 [data-effect='pure-effect-push'] .pure-drawer {
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms; }
+  transition-duration: 300ms; }
 
 [data-effect='pure-effect-push'] .pure-drawer[data-position='left'] {
   -webkit-transform: translate3d(-100%, 0, 0);
@@ -873,8 +828,7 @@ body {
 
 /* PUSHER */
 [data-effect='pure-effect-push'] .pure-pusher-container .pure-pusher {
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms; }
+  transition-duration: 300ms; }
 
 [data-effect='pure-effect-push'] .pure-toggle[data-toggle='left']:checked ~ .pure-pusher-container .pure-pusher {
   -webkit-transform: translate3d(300px, 0, 0);
@@ -914,10 +868,8 @@ body {
 
 /* OVERLAY */
 [data-effect='pure-effect-push'] .pure-overlay {
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms;
-  -webkit-transition-delay: 150ms;
-          transition-delay: 150ms; }
+  transition-duration: 300ms;
+  transition-delay: 150ms; }
 
 /********************
 ## Effect - Bounce ##
@@ -937,10 +889,8 @@ body {
 
 /* OVERLAY */
 [data-effect="pure-effect-bounce"] .pure-overlay {
-  -webkit-transition-duration: 1000ms;
-          transition-duration: 1000ms;
-  -webkit-transition-delay: 500ms;
-          transition-delay: 500ms; }
+  transition-duration: 1000ms;
+  transition-delay: 500ms; }
 
 /******************
 ## Effect - Fade ##
@@ -960,10 +910,8 @@ body {
 
 /* OVERLAY */
 [data-effect="pure-effect-fade"] .pure-overlay {
-  -webkit-transition-duration: 1000ms;
-          transition-duration: 1000ms;
-  -webkit-transition-delay: 500ms;
-          transition-delay: 500ms; }
+  transition-duration: 1000ms;
+  transition-delay: 500ms; }
 
 /*******************
 ## Effect - FlipX ##
@@ -983,10 +931,8 @@ body {
 
 /* OVERLAY */
 [data-effect="pure-effect-flipX"] .pure-overlay {
-  -webkit-transition-duration: 1000ms;
-          transition-duration: 1000ms;
-  -webkit-transition-delay: 500ms;
-          transition-delay: 500ms; }
+  transition-duration: 1000ms;
+  transition-delay: 500ms; }
 
 /*******************
 ## Effect - FlipY ##
@@ -1006,10 +952,8 @@ body {
 
 /* OVERLAY */
 [data-effect="pure-effect-flipY"] .pure-overlay {
-  -webkit-transition-duration: 1000ms;
-          transition-duration: 1000ms;
-  -webkit-transition-delay: 500ms;
-          transition-delay: 500ms; }
+  transition-duration: 1000ms;
+  transition-delay: 500ms; }
 
 /******************
 ## Effect - Zoom ##
@@ -1029,10 +973,8 @@ body {
 
 /* OVERLAY */
 [data-effect="pure-effect-zoom"] .pure-overlay {
-  -webkit-transition-duration: 1000ms;
-          transition-duration: 1000ms;
-  -webkit-transition-delay: 500ms;
-          transition-delay: 500ms; }
+  transition-duration: 1000ms;
+  transition-delay: 500ms; }
 
 /*!
 Animate.css - http://daneden.me/animate
@@ -1096,6 +1038,7 @@ Copyright (c) 2014 Daniel Eden
   -webkit-animation-name: bounce;
   animation-name: bounce;
   -webkit-transform-origin: center bottom;
+  -ms-transform-origin: center bottom;
   transform-origin: center bottom; }
 
 @-webkit-keyframes flash {
@@ -1243,6 +1186,7 @@ Copyright (c) 2014 Daniel Eden
     transform: rotate3d(0, 0, 1, 0deg); } }
 .swing {
   -webkit-transform-origin: top center;
+  -ms-transform-origin: top center;
   transform-origin: top center;
   -webkit-animation-name: swing;
   animation-name: swing; }

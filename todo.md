@@ -1,7 +1,7 @@
 # Main Page
 - [ ] add resume
 - [ ] LM icon
-- [ ] moduleize sass
+- [ ] modularize sass
 - [ ] minimize layout
 - [ ] volunteer
 - [ ] sticky header

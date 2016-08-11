@@ -2,7 +2,7 @@ $(document).ready(function () {
 	$(".animsition").animsition({
 		inClass: 'fade-in-up',
 		outClass: 'fade-out-up',
-		inDuration: 500,
+		inDuration: 400,
 		outDuration: 300,
 		//linkElement: '.animsition-link',
 		linkElement: 'a:not([target="_blank"]):not([href^="#"])',
