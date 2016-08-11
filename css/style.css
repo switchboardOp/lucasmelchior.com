@@ -278,7 +278,8 @@ a.accordion-toggle.collapsed:after {
 
 .drawer-container {
   position: relative;
-  top: 30%; }
-
-.indent20 {
-  margin-left: 20px; }
+  top: 30%;
+  pointer-events: none; }
+  .drawer-container a {
+    margin-left: 20px;
+    pointer-events: auto; }
