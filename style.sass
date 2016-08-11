@@ -102,7 +102,7 @@ a
 				font-weight: 600
 
 .hero
-		background: $black url('../img/mode-off.jpg') no-repeat fixed center
+		background: $black url('../img/mode-off.jpg') no-repeat center center fixed
 		background-size: cover
 		overflow: hidden
 		color: $white
@@ -144,8 +144,8 @@ a
 
 blockquote
 		display: block
-		padding: 40px 20px 245px 70px
-		margin: 0 0 -210px 0
+		padding: 40px 25px 245px 60px
+		margin: 0 10px -210px 0
 		position: relative
 		z-index: -1
 
@@ -231,6 +231,7 @@ a.accordion-toggle:after
 		font-family: 'Glyphicons Halflings'
 		position: relative
 		top: 5px
+		right: 10px
 		content: "\e252"
 		color: $main-color
 		float: right
@@ -267,3 +268,19 @@ a.accordion-toggle.collapsed:after
 .accordion-toggle.collapsed > .panel-heading, .accordion-toggle.collapsed
 		transform: rotate(0deg)
 		color: inherit
+
+.flash
+		font-size: 30px
+
+#particles-js
+		position: absolute
+		top: 0px
+		height: 100%
+		width: 100%
+
+.drawer-container
+		position: relative
+		top: 30%
+
+.indent20
+		margin-left: 20px

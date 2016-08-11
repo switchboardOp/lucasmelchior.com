@@ -10,6 +10,11 @@ module.exports = function (grunt) {
 					'css/style.css': 'style.sass',
 					'avatar/style.css': 'avatar/style.sass'
 				}
+			},
+			puredrawer: {
+				files: {
+					'css/pure-drawer.css': 'puredrawer/scss/pure-drawer.scss'
+				}
 			}
 		},
 		autoprefixer: {
@@ -42,7 +47,7 @@ module.exports = function (grunt) {
 		},
 		watch: {
 			styles: {
-				files: '**/*.sass',
+				files: '**/**/*.sass',
 				tasks: ['styles']
 			},
 			images: {
@@ -53,7 +58,7 @@ module.exports = function (grunt) {
 	});
 	grunt.registerTask('styles', 'Compiles the stylesheets.', ['newer:sass', 'newer:autoprefixer', 'newer:cssmin']);
 	grunt.registerTask('images', ['newer:imagemin']);
-	grunt.registerTask('default', ['styles','images','watch']);
+	grunt.registerTask('default', ['styles', 'images', 'watch']);
 	grunt.loadNpmTasks('grunt-newer');
 	grunt.loadNpmTasks('grunt-contrib-imagemin');
 	grunt.loadNpmTasks('grunt-contrib-copy');

@@ -1,5 +1,7 @@
 # Main Page
 - [ ] add resume
+- [ ] LM icon
+- [ ] moduleize sass
 - [ ] minimize layout
 - [ ] volunteer
 - [ ] sticky header
@@ -22,6 +24,7 @@
 - [x] skyline
 - [x] build script
 - [x] page transitions
+- [x] drawer for webtoys
 
 # Avatar
 - [x] add LM bust
