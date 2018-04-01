@@ -6,7 +6,7 @@
 - [ ] volunteer
 - [ ] sticky header
 - [ ] corner model (low poly)
-- [ ] asymetric mask
+- [ ] asymetric drawer toggle
 - [ ] improve build
 	- [ ] src/build
 	- [ ] scripts
